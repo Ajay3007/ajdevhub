@@ -1,0 +1,10 @@
+# Jekyll configuration
+
+title: Ajay's Dev Hub
+description: "Learning notes and tutorials on C++, DPDK, VPP, Networking, OS, System Design"
+baseurl: "/ajdevhub" # <- set to "/" if you rename repo to ajay3007.github.io for personal site
+url: "https://ajay3007.github.io"
+theme: minima
+plugins:
+  - jekyll-feed
+markdown: kramdown

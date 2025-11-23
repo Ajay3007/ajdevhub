@@ -1,3 +1,16 @@
-# Operating Systems
+---
+title: Operating Systems
+---
 
-Index for OS topics.
+
+# Operating Systems Notes
+
+
+Chapters:
+- Processes and threads
+- Memory management and paging
+- Scheduling algorithms
+- Concurrency primitives
+
+
+Add lab examples and small C programs as you go.

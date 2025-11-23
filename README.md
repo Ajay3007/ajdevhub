@@ -1,6 +1,19 @@
-# ajdevhub
+# ajdevhub — Ajay's Developer Hub
 
-Documentation repository. See `docs/` for topic pages.
+
+This repository contains documentation and tutorials across topics I study: C++ OOP, DPDK, VPP, Networking, Operating Systems, and System Design. The `docs/` folder powers the GitHub Pages site.
+
+
+Visit the site at: https://ajay3007.github.io/ajdevhub/
+
+
+## Quick start
+1. Clone this repo
+2. Browse `docs/` locally or open the GitHub Pages site
+
+
+## Contributing
+Add markdown files under `docs/` for new topics and push to `main`.
 
 ## Folder Structure
 
@@ -77,8 +90,3 @@ npx http-server docs -p 8000
 ```
 
 Then open `http://localhost:8000` in your browser.
-
-## Notes / Next steps
-
-- Enable GitHub Pages in the repository settings (select "Deploy from GitHub Actions" or the workflow will publish once Pages is enabled).
-- If you want a static site generator (MkDocs, Docusaurus, Jekyll), I can add a build step to the workflow.
