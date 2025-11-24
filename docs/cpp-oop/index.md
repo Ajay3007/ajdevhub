@@ -6,7 +6,7 @@ title: C++ / OOP
 # C++ / OOP
 
 
-This section collects your C++ OOP tutorials, examples and links.
+This section collects C++ OOP tutorials, examples and links.
 
 
 ## Pages
@@ -14,7 +14,7 @@ This section collects your C++ OOP tutorials, examples and links.
 - [Operator overloading](./operator-overloading.md)
 - [Smart pointers and Rule of 0](./smart-pointers.md)
 - [Car Project (link to repo)](https://github.com/Ajay3007/car_project)
-- [OOP examples repo](https://github.com/Ajay3007/oops)
+- [OOP examples repo](https://github.com/Ajay3007/oops/README.md)
 
 
 ---
