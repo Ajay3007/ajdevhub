@@ -12,17 +12,12 @@ Welcome — a centralized place for my notes, tutorials and project links on C++
 
 ## Quick navigation
 
-
-- [C++ / OOP](/ajdevhub/cpp-oop/)
-- [Networking](/ajdevhub/networking/)
-- [DPDK](/ajdevhub/dpdk/)
-- [VPP](/ajdevhub/vpp/)
-- [Operating Systems](/ajdevhub/os/)
-- [System Design](/ajdevhub/system-design/)
-
-
-> NOTE: If you rename this repo to `ajay3007.github.io` to make it a personal site, remove `/ajdevhub` from links (I explain how below).
-
+- [C++ / OOP](cpp-oop/index.md)
+- [Networking](networking/index.md)
+- [DPDK](dpdk/index.md)
+- [VPP](vpp/index.md)
+- [Operating Systems](os/index.md)
+- [System Design](system-design/index.md)
 
 ---
 
@@ -39,7 +34,6 @@ Pick a topic above. Each topic page contains:
 
 
 ---
-
 
 ## Contact
 Find me on GitHub: [Ajay3007](https://github.com/Ajay3007)

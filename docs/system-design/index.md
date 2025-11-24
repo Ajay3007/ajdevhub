@@ -13,5 +13,3 @@ Topics:
 - Databases & partitioning
 - High-level architecture patterns
 
-
-Each page should include design diagrams and trade-offs.

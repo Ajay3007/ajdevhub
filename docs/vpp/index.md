@@ -14,4 +14,11 @@ Topics: VPP node graph, memif, plugins, interfaces and development tips.
 - `vppctl show nodes`
 
 
-Link to your VPP experiments and code in your personal repos.
+## Topics Covered
+
+### [L3 Forwarding VPP](L3fwd.md)
+Explains a simple IPv4 L3 forwarding testbed using:
+
+- A traffic generator (PktGen)
+
+- A VPP router running with DPDK on two physical NIC ports

@@ -12,5 +12,3 @@ Chapters:
 - Scheduling algorithms
 - Concurrency primitives
 
-
-Add lab examples and small C programs as you go.
