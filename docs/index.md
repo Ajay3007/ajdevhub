@@ -12,7 +12,9 @@ Welcome — a centralized place for my notes, tutorials and project links on C++
 
 ## Quick navigation
 
-- [C++ / OOP](cpp-oop/index.md)
+- [C++ Concepts](cpp-concepts/index.md)
+- [DSA](dsa/index.md)
+- [OOP](cpp-oop/index.md)
 - [Networking](networking/index.md)
 - [DPDK](dpdk/index.md)
 - [VPP](vpp/index.md)

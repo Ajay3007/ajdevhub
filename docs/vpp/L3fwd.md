@@ -12,6 +12,16 @@ This document explains a simple IPv4 L3 forwarding testbed using:
 
 The goal is to understand how a packet enters VPP, how it is routed (L3 forwarding), and how it leaves via the correct egress interface.
 
+**NOTE:**
+This example is based on Dataplane Stack [IPV4 L3 Forwarding VPP](https://dataplane-stack.docs.arm.com/en/nw-ds-2024.03.29/user_guide/l3_forwarding_vpp.html)
+
+Scripts file to run the VPP application can be founde [Here](../../src/vpp/l3fwd/).
+It contains:
+- Router
+- Traffic Monitor
+- stop scripts
+
+
 ## 🖥️ 1. Testbed Overview
 
 ```bash
@@ -36,7 +46,6 @@ The goal is to understand how a packet enters VPP, how it is routed (L3 forwardi
                                   +-----------------------------------+
 
 ```
-
 
 
 
@@ -68,27 +77,34 @@ Add IPv4 route for the destination:
 ip route add 1.1.1.1/32 via 10.0.0.30 Ethernet1.100
 ```
 
+This means:
+
+To reach IP 1.1.1.1 →
+send to next-hop 10.0.0.30 →
+on Ethernet1.100 →
+using destination MAC DD:DD:DD:DD:DD:DD.
+
 ## 📥 4. Packet Entering VPP (Ingress)
 
 The traffic generator sends:
 
 **Ethernet Header**
 ```bash
-src MAC = AA:AA:AA:AA:AA:AA
-dst MAC = BB:BB:BB:BB:BB:BB    (MAC of VPP ingress interface)
+src MAC = AA:AA:AA:AA:AA:AA    (Pktgen)
+dst MAC = BB:BB:BB:BB:BB:BB    (MAC of VPP ingress interface Ethernet0.100)
 vlan    = 100
 ```
 
 **IP Header**
 ```bash
 src IP = 192.168.10.10
-dst IP = 1.1.1.1
+dst IP = 1.1.1.1        <-- this is very important
 ```
 
 VPP receives this packet on Ethernet0.100.
 
 ## 🔍 5. VPP Routing Decision (FIB Lookup)
-VPP checks the destination:
+VPP removes L2 header and does an IPV4 lookup on:
 ```bash
 dst IP = 1.1.1.1
 ```
@@ -96,6 +112,10 @@ dst IP = 1.1.1.1
 It matches the installed route:
 ```bash
 1.1.1.1/32 via 10.0.0.30 out Ethernet1.100
+```
+This route tells VPP:
+```
+“To reach 1.1.1.1 → send to next-hop 10.0.0.30 through Ethernet1.100.”
 ```
 
 **So VPP selects:**
@@ -105,6 +125,8 @@ It matches the installed route:
 - Next-hop IP → 10.0.0.30
 
 - Next-hop MAC → DD:DD:DD:DD:DD:DD
+
+This is called Adjacency Rewrite.
 
 ## 🔧 6. Adjacency Rewrite (Core of L3 Forwarding)
 
@@ -116,15 +138,20 @@ It matches the installed route:
 
 - Rewrite the L2 Ethernet header
 
-### New Ethernet header VPP builds:
+### New Ethernet (L2) header VPP builds:
 
 ```bash
 dst MAC = DD:DD:DD:DD:DD:DD     (next-hop MAC)
-src MAC = CC:CC:CC:CC:CC:CC     (VPP egress interface MAC)
+src MAC = CC:CC:CC:CC:CC:CC     (VPP egress interface MAC Ethernet1.100)
 vlan    = 100
 ```
 
 The IP header does not change (except TTL and checksum).
+
+#### ✔ IMPORTANT:
+
+Even though the packet ENTERED on Ethernet0.100,
+it LEAVES using the MAC of Ethernet1.100.
 
 ## 📤 7. Packet Leaving VPP (Egress)
 
@@ -144,19 +171,32 @@ src IP = 192.168.10.10
 dst IP = 1.1.1.1
 ttl = 63
 ```
-
-This is standard router behavior.
+This packet is now sent toward the next-hop (10.61.8.120). This is standard router behavior.
 
 ## 🧠 8. Why This Is L3 Forwarding?
 
-Because:
+Because VPP:
 
-- ✔ VPP changes the MAC addresses (L2 rewrite)
-- ✔ VPP keeps IP addresses unchanged (no NAT)
-- ✔ TTL is decremented, checksum updated
-- ✔ Packet enters through one interface and leaves through another
+**❌ DOES NOT change:**
 
-This is exactly what routers do.
+- Source IP
+
+- Destination IP
+
+**✔ DOES change:**
+
+- Destination MAC (next-hop’s MAC)
+
+- Source MAC (output interface MAC)
+
+- TTL and checksum
+
+✔ VPP changes the MAC addresses (L2 rewrite)
+✔ VPP keeps IP addresses unchanged (no NAT)
+✔ TTL is decremented, checksum updated
+✔ Packet enters through one interface and leaves through another
+
+This is exactly what a L3 routers do.
 
 ## 📝 9. Summary
 
