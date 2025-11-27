@@ -18,6 +18,57 @@ This section is part of my broader learning journey across Systems, Networking, 
 
 ---
 
+# ⭐ 1. The DSA Structure
+
+## 📌 A. Core Data Structures
+
+- [Arrays](../../src/DSA/Arrays/arrays.md)
+
+- [strings](../../src/DSA/Strings/string.md)
+
+- [Hash maps / hash sets]
+
+- [Linked Lists]
+
+- [Stacks & queues]
+
+- [Priority queues (heaps)]
+
+- [Binary trees & BST]
+
+- [Graphs]
+
+- [Tries]
+
+- [Dynamic Programming]
+
+- [Bit manipulation]
+
+## 📌 B. Algorithms
+
+- [Searching (binary search patterns)]
+
+- [Sorting (custom comparator, stable sort, counting sort)]
+
+- [Sliding window]
+
+- [Two pointers]
+
+- [Backtracking]
+
+- [Greedy]
+
+- [BFS/DFS]
+
+- [Dijkstra / BFS on weighted graphs]
+
+- [Topological sort]
+
+- [KMP / Rabin Karp (string)]
+
+- [Union-Find]
+
+
 # 📚 Table of Contents
 
 ## 1️⃣ **Basics**
@@ -33,7 +84,6 @@ This section is part of my broader learning journey across Systems, Networking, 
 - [Linked Lists](./linked_list.md)
 - [Stacks](./stack.md)
 - [Queues](./queue.md)
-- [Deque](./deque.md)
 
 ### 🔹 Hashing & Maps
 - [Hash Tables](./hash_tables.md)
