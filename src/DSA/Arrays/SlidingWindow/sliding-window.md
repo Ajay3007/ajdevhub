@@ -146,7 +146,7 @@ Very direct.
 ## ⭐ Must-Do Sliding Window Problems
 ### Level 1 — Basics
 
-**1. [Leetcode 121. Best Time to Buy and Sell Stock](https://leetcode.com/problems/best-time-to-buy-and-sell-stock/description/)**
+#### 1. [Leetcode 121. Best Time to Buy and Sell Stock](https://leetcode.com/problems/best-time-to-buy-and-sell-stock/description/)
 
 **- Brute Force Approach:**
 For every prices[i], check profit for every prices[j]; where, j>i
@@ -162,7 +162,7 @@ Time Complexity : O(n)
 
 **[Solution Leetcode 121](Leetcode-121.cpp)**
 
-**2. [Leetcode 567. Permutation in String](https://leetcode.com/problems/permutation-in-string/description/)**
+#### 2. [Leetcode 567. Permutation in String](https://leetcode.com/problems/permutation-in-string/description/)
 
 **- Brute Force Approach:**
 
@@ -181,6 +181,74 @@ Check for each permutation of s1 whether it is present in s2 or not!
 3. For each possible window size check the same frequency matches with the original frequency of s1.
 
 **[Solution Leetcode 567](Leetcode-567.cpp)**
+
+#### 3. [Leetcode 424. Longest Repeating Character Replacement](https://leetcode.com/problems/longest-repeating-character-replacement/description/)
+
+**- Brute Force Approach:**
+
+```cpp 
+s = "PXQXYXB";
+k = 2
+```
+What will be a valid substring? Because we are allowed only k operations to do so, we would want to minimize the number of operations.
+
+Lets a substring with length `len`. It is valid if following condition satisfies:
+
+`(len - [most occuring char freq]) <= k`
+
+Generate all substring and check for a valid substring as defined above.
+
+**- Optimal Solution**
+
+**[Refer this pdf image for Explaination](leetcode424.pdf)**
+
+**[Solution Leetcode 424](Leetcode-424.cpp)**
+
+#### 4. [Leetcode 3. Longest Substring Without Repeating Characters](https://leetcode.com/problems/longest-substring-without-repeating-characters/description/)
+
+**- Brute Force Approach:**
+
+```cpp
+s = "abatman"
+ans = 4
+```
+
+Generate all substring and check for the longest substring without repeating character
+
+**- Optimal Solution**
+
+**[Refer this pdf image for Explaination](leetcode-3.pdf)**
+
+**[Solution Leetcode 3](Leetcode-3.cpp)**
+
+#### 5. [Leetcode 239. Sliding Window Maximum](https://leetcode.com/problems/sliding-window-maximum/description/)
+
+**- Brute Force Approach:**
+
+```cpp
+nums = [1,3,-1,-3,5,3,6,7]
+k = 3
+```
+
+Iterate for each window and find maximum of each window 
+
+Time Complexity : O(n*k)
+
+**- Better Approach**
+
+**[For my Leetcode Solution link click here](https://leetcode.com/problems/sliding-window-maximum/solutions/7381366/sliding-window-maximum-using-multiset-cl-pres/)
+
+**- Optimal Solution**
+
+We may observe that in a window, the elements that come before the largest element will never be selected as the largest element of any future windows.
+
+In general, whenever we encounter a new element x, we want to discard all elements that are less than x before adding x. Let's say we currently have [63, 15, 8, 3] and we encounter 12. Any future window with 8 or 3 will also contain 12, so we can discard them. After discarding them and adding 12, we have [63, 15, 12]. As you can see, we keep elements in descending order.
+
+**[Solution Leetcode 239](Leetcode-239.cpp)**
+
+
+
+
 
 Max sum subarray of size K
 

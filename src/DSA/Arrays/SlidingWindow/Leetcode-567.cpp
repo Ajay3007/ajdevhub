@@ -1,11 +1,11 @@
 #include <bits/stdc++.h>
 using namespace std;
 
-bool checkAllZero(vector<int> &freqS1)
+bool matches(vector<int> &freqS1, vector<int> &freqS2)
 {
     for (int i = 0; i < 26; i++)
     {
-        if (freqS1[i] != 0)
+        if (freqS1[i] != freqS2[i])
             return false;
     }
     return true;
@@ -16,39 +16,22 @@ bool checkInclusion(string s1, string s2)
     int k = s1.length(), n = s2.length();
     if (k > n)
         return false;
-    vector<int> freqS1(26, 0);
+    vector<int> freqS1(26, 0), freqS2(26, 0);
     for (int i = 0; i < k; i++)
     {
         freqS1[s1[i] - 'a']++;
+        freqS2[s2[i] - 'a']++;
     }
-    int l = 0, r = k - 1;
-    while (r < n)
+    // slide the window through s2 and compare the freqMaps
+    for (int i = 0; i < n - k; i++)
     {
-        vector<int> freqS1_dup(freqS1.begin(), freqS1.end());
-        int i = l;
-        int j;
-        while (i <= r)
-        {
-            j = s2[i] - 'a';
-            if (freqS1_dup[j] != 0)
-            {
-                freqS1_dup[j]--;
-            }
-            else
-            {
-                break;
-            }
-            i++;
-        }
-        if (i == r + 1)
-        {
-            if (checkAllZero(freqS1_dup))
-                return true;
-        }
-        l++;
-        r++;
+        if (matches(freqS1, freqS2))
+            return true;
+        freqS2[s2[i + k] - 'a']++; // Add new char to the window
+        freqS2[s2[i] - 'a']--;     // Remove old char from the window
     }
-    return false;
+    // Check for the last window
+    return matches(freqS1, freqS2);
 }
 
 int main()
