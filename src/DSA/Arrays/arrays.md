@@ -41,6 +41,31 @@
 
 We will cover each with template + example.
 
+## ⭐ Must-Do Array Problems - Practice
+
+#### 1. [Leetcode 1. Two Sum](https://leetcode.com/problems/two-sum/description/)
+
+#### 2. [Leetcode 217. Contains Duplicate](https://leetcode.com/problems/contains-duplicate/description/)
+
+#### 3. [Leetcode 219. Contains Duplicate II](https://leetcode.com/problems/contains-duplicate-ii/description/)
+
+#### 4. [Leetcode 242. Valid Anagram](https://leetcode.com/problems/valid-anagram/description/)
+
+#### 5. [Leetcode 49. Group Anagrams](https://leetcode.com/problems/group-anagrams/description/)
+
+#### 6. [Leetcode 238. Product of Array Except Self](https://leetcode.com/problems/product-of-array-except-self/description/)
+
+#### 7. [Leetcode 347. Top K Frequent Elements](https://leetcode.com/problems/top-k-frequent-elements/description/)
+
+#### 8. [Leetcode 13. Roman to Integer](https://leetcode.com/problems/roman-to-integer/description/)
+
+#### 9. [Leetcode 953. Verifying an Alien Dictionary](https://leetcode.com/problems/verifying-an-alien-dictionary/description/)
+
+#### 10. [Leetcode 128. Longest Consecutive Sequence](https://leetcode.com/problems/longest-consecutive-sequence/description/)
+
+#### 11. [Leetcode 41. First Missing Positive](https://leetcode.com/problems/first-missing-positive/description/)
+
+
 ## ⭐ Pattern → Template → Example
 
 ### 🔶 [Pattern 1: Sliding Window](SlidingWindow/sliding-window.md)

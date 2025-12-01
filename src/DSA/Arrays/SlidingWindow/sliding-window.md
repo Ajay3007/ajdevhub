@@ -236,7 +236,7 @@ Time Complexity : O(n*k)
 
 **- Better Approach**
 
-**[For my Leetcode Solution link click here](https://leetcode.com/problems/sliding-window-maximum/solutions/7381366/sliding-window-maximum-using-multiset-cl-pres/)
+**[For my Leetcode Solution link click here](https://leetcode.com/problems/sliding-window-maximum/solutions/7381366/sliding-window-maximum-using-multiset-cl-pres/)**
 
 **- Optimal Solution**
 
@@ -247,6 +247,16 @@ In general, whenever we encounter a new element x, we want to discard all elemen
 **[Solution Leetcode 239](Leetcode-239.cpp)**
 
 
+#### 6. [Leetcode 76. Minimum Window Substring](https://leetcode.com/problems/minimum-window-substring/description/)
+
+```cpp
+s = "ADOBECODEBANC"
+T = "ABC"
+```
+
+**[For my Leetcode Solution link click here](https://leetcode.com/problems/minimum-window-substring/solutions/7384109/leetcode-76-minimum-window-substring-two-jqes/)**
+
+All solution and approaches are discussed in above link.
 
 
 
