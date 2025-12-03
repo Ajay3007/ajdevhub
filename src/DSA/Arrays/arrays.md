@@ -93,7 +93,7 @@ for (int right = 0; right < n; right++) {
 1. [Longest substring without repeating characters](https://leetcode.com/problems/longest-substring-without-repeating-characters/description/)
 
 
-### 🔶 Pattern 2: Two Pointers
+### 🔶 [Pattern 2: Two Pointers](TwoPointers/two-pointer.md)
 
 Used when array is sorted, or when you're searching for pairs.
 
