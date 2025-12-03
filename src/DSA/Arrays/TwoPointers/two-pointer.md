@@ -178,7 +178,7 @@ while (i < n && j < m) {
 
 #### 2. [Leetcode 15. 3Sum](https://leetcode.com/problems/3sum/description/)
 
-- **For my Leetcode Solution link click [Three-Sum Using Sorting + Two Pointers (C++ | O(n²))](https://leetcode.com/problems/3sum/solutions/7388635/three-sum-using-sorting-two-pointers-c-o-r6ta/)**
+- **For my Leetcode Solution link click [Three-Sum Using Sorting + Two Pointers (C++, O(n²))](https://leetcode.com/problems/3sum/solutions/7388635/three-sum-using-sorting-two-pointers-c-o-r6ta/)**
 
 #### 3. [Leetcode 11. Container With Most Water](https://leetcode.com/problems/container-with-most-water/description/)
 
@@ -195,7 +195,7 @@ while (i < n && j < m) {
 
 #### 1. [Leetcode 42. Trapping Rain Water](https://leetcode.com/problems/trapping-rain-water/description/)
 
-- **For my Leetcode Solution link click [Trapping Rain Water — Prefix/Suffix Max Approach (O(n) Time | O(n) Space)](https://leetcode.com/problems/trapping-rain-water/solutions/7388828/trapping-rain-water-prefixsuffix-max-app-zatc/)**
+- **For my Leetcode Solution link click [Trapping Rain Water — Prefix/Suffix Max Approach (O(n) Time, O(n) Space)](https://leetcode.com/problems/trapping-rain-water/solutions/7388828/trapping-rain-water-prefixsuffix-max-app-zatc/)**
 
 - **My Leetcode Optimal Solution link click [Trapping Rain Water — Optimal O(1)-Space Two-Pointer Approach](https://leetcode.com/problems/trapping-rain-water/solutions/7389700/trapping-rain-water-optimal-o1-space-two-snbg/)**
 
