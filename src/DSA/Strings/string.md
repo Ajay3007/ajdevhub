@@ -145,10 +145,9 @@ These help in elite interviews.
 
     - If you can't see the problem, **[Click Here](leetcode-271.md)**
 
-7. [Leetcode 647. Palindromic Substrings](https://leetcode.com/problems/palindromic-substrings/description/) - **[My Leetcode Solution link]()**
+7. [Leetcode 647. Palindromic Substrings](https://leetcode.com/problems/palindromic-substrings/description/) - **[My Leetcode Solution link](https://leetcode.com/problems/palindromic-substrings/solutions/7395151/expand-around-center-on2-solution-by-aja-6hvd/)**
 
-8. 
-
+8. [Leetcode 5. Longest Palindromic Substring](https://leetcode.com/problems/longest-palindromic-substring/description/) - **[My Leetcode Solution link](https://leetcode.com/problems/longest-palindromic-substring/solutions/7395617/longest-palindromic-substring-expand-aro-ky6o/)**
 
 
 ## 🔹 Level 3 – Hard
@@ -164,4 +163,8 @@ These help in elite interviews.
 5. KMP + Z-algorithm applications
 
 6. Longest duplicate substring (binary search + hash)
+
+7. [Leetcode 647. Palindromic Substrings](https://leetcode.com/problems/palindromic-substrings/description/) - **[My Leetcode Solution link](https://leetcode.com/problems/palindromic-substrings/solutions/7395151/expand-around-center-on2-solution-by-aja-6hvd/)**
+
+8. [Leetcode 68. Text Justification](https://leetcode.com/problems/text-justification/description/) - **[My Leetcode Solution link](https://leetcode.com/problems/text-justification/solutions/7398638/greedy-line-packing-smart-space-distribu-f3sp/)**
 

@@ -46,9 +46,7 @@ This section is part of my broader learning journey across Systems, Networking, 
 
 ## 📌 B. Algorithms
 
-- [Searching (binary search patterns)]
-
-- [Sorting (custom comparator, stable sort, counting sort)]
+- [Searching & Sorting (binary search patterns, custom comparator, stable sort, counting sort)](../../src/DSA/Searching-Sorting/searching-sorting.md)
 
 - [Sliding window]
 
