@@ -109,6 +109,35 @@ public:
 };
 ```
 
+2. [Floor/Ceil of an Element in a Sorted Array - Approach](floorAndCeil.pdf)
+
+3. [Leetcode 35. Search Insert Position](https://leetcode.com/problems/search-insert-position/description/) - **[My Approach](floorAndCeil.pdf)**
+
+4. [Leetcode 744. Find Smallest Letter Greater Than Target](https://leetcode.com/problems/find-smallest-letter-greater-than-target/description/)
+
+This is similar to finding Ceil of an element in a Sorted Array.
+
+```cpp
+class Solution {
+public:
+    char nextGreatestLetter(vector<char>& letters, char target) {
+        int n = letters.size();
+        int l = 0, r = n-1, mid, ans = 0;
+        while(l <= r) {
+            mid = l + (r - l)/2;
+            if(letters[mid] > target) {
+                ans = mid;
+                r = mid - 1;
+            } else if(letters[mid] <= target) {
+                l = mid + 1;
+            }
+        }
+        return letters[ans];
+    }
+};
+```
+
+
 
 
 ## 🔹 Level 2 – Medium
@@ -119,22 +148,37 @@ public:
 
 3. [Rotation Count in a Rotated Sorted Array](https://www.geeksforgeeks.org/dsa/find-rotation-count-rotated-sorted-array/) - **[Click for My Approach](Kth_rotation.pdf)**
 
-**[Click here for Solution](Kth_rotation.cpp)**
+    **[Click here for Solution](Kth_rotation.cpp)**
 
 4. [Leetcode 153. Find Minimum in Rotated Sorted Array](https://leetcode.com/problems/find-minimum-in-rotated-sorted-array/description/) - **[My Approach & Leetcode Solution link](https://leetcode.com/problems/find-minimum-in-rotated-sorted-array/solutions/7407426/binary-search-to-locate-rotation-point-o-vh1h/)**
 
-This problem is exactly same as the above problem 3. Rotation Count in a Rotated Sorted Array 
+    This problem is exactly same as the above problem 3. Rotation Count in a Rotated Sorted Array 
 
 5. [Leetcode 33. Search in Rotated Sorted Array](https://leetcode.com/problems/search-in-rotated-sorted-array/description/) - **[My Approach & Leetcode Solution link](https://leetcode.com/problems/search-in-rotated-sorted-array/solutions/7407549/search-in-rotated-sorted-array-find-rota-q0h3/)**
 
-This problem is also the modified version of the previous problem 4 and hence problem 3.
+    This problem is also the modified version of the previous problem 4 and hence problem 3.
+
+6. [Find Position of an Element in a Sorted Array of Infinite Numbers](https://www.geeksforgeeks.org/dsa/find-position-element-sorted-array-infinite-numbers/) - **[Click here for my Approach](bsOnInfiniteNum.pdf)**
+
+7. [Index of first 1 in an infinite binary sorted array](https://www.geeksforgeeks.org/dsa/find-index-first-1-infinite-sorted-array-0s-1s/) - **[Click here for my Approach](firstOneInBinaryInfiniteArray.pdf)**
+
+    Approach for this problem is similar to the previous problem number 6.
+    - First find out the Bound where first time 1 can appear (say `[l, r]`).
+    - Now find the occurrence of first 1 in `[l, r]`.
+
+8. [Leetcode 162. Find Peak Element](https://leetcode.com/problems/find-peak-element/description/) - **[My Approach & Leetcode Solution link](https://leetcode.com/problems/find-peak-element/solutions/7413917/find-peak-element-binary-search-on-slope-sjc3/)**
+
+9. [Leetcode 852. Peak Index in a Mountain Array](https://leetcode.com/problems/peak-index-in-a-mountain-array/description/) - **[My Approach & Leetcode Solution link](https://leetcode.com/problems/peak-index-in-a-mountain-array/solutions/7413977/binary-search-on-increasingdecreasing-sl-w36n/)**
 
 
 
 
 ## 🔹 Level 3 – Hard
 
-1. 
+1. [Leetcode 1095. Find in Mountain Array](https://leetcode.com/problems/find-in-mountain-array/description/) - **[My Approach & Leetcode Solution link](https://leetcode.com/problems/find-in-mountain-array/solutions/7414067/binary-search-on-mountain-array-find-pea-s9fz/)**
+
+2. 
+
 
 
 
