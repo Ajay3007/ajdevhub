@@ -3,22 +3,28 @@
 
 This repository contains documentation and tutorials across topics I study: C++ OOP, DPDK, VPP, Networking, Operating Systems, and System Design.
 
-Visit the site at: https://ajay3007.github.io/ajdevhub/
+Visit the site : [👉 HERE](https://ajay3007.github.io/ajdevhub/)
 
 
 ## Quick start
 
-### [Getting Started](/docs/index.md)
+## [Getting Started](/docs/index.md)
 
-### [Source Code](/src/)
+## [Data Structures & Algorithms (DSA)](/docs/dsa/index.md)
 
-## What each folder contains
+## [C++ Concepts](/docs/cpp-concepts/index.md)
 
-- **`docs/`**: Primary documentation content. Markdown pages live here and can be published as a static site.
-- **`docs/cpp-oop/`**: Notes and small projects demonstrating C++ object-oriented programming concepts.
-- **`docs/networking/`**: Networking fundamentals (OSI model, DHCP, routing).
-- **`docs/dpdk/`**: DPDK-specific notes such as hugepages, mbuf, and flow API.
-- **`docs/vpp/`**: Vector Packet Processing notes, nodes, plugins and interfaces.
-- **`docs/os/`**: Operating systems topics: processes, memory, and threading.
-- **`docs/system-design/`**: System design patterns: load balancing, caching, databases, microservices.
+## [OOP](/docs/cpp-oop/index.md)
+
+## [Networking](/docs/networking/index.md)
+
+## [DPDK](/docs/dpdk/index.md)
+
+## [VPP](/docs/vpp/index.md)
+
+## [Operating Systems](/docs/os/index.md)
+
+## [System Design](/docs/system-design/index.md)
+
+## [Recusrion](/src/recursion/recursion.md)
 

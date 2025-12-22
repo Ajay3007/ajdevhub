@@ -28,7 +28,7 @@ This section is part of my broader learning journey across Systems, Networking, 
 
 - [Hash maps / hash sets]
 
-- [Linked Lists]
+- [Linked Lists](../../src/DSA/LinkedList/linked-list.md)
 
 - [Stacks & queues]
 
@@ -48,9 +48,9 @@ This section is part of my broader learning journey across Systems, Networking, 
 
 - [Searching & Sorting (binary search patterns, custom comparator, stable sort, counting sort)](../../src/DSA/Searching-Sorting/searching-sorting.md)
 
-- [Sliding window]
+- [Sliding window](../../src/DSA/Arrays/SlidingWindow/sliding-window.md)
 
-- [Two pointers]
+- [Two pointers](../../src/DSA/Arrays/TwoPointers/two-pointer.md)
 
 - [Backtracking]
 
@@ -70,63 +70,59 @@ This section is part of my broader learning journey across Systems, Networking, 
 # 📚 Table of Contents
 
 ## 1️⃣ **Basics**
-- [Recursion Deep Dive](./recursion.md)
-- [Memory Layout & Stack vs Heap](./memory_layout.md)
+- [Recursion Deep Dive](../../src/recursion/recursion.md)
+- [Memory Layout & Stack vs Heap]
 
 ---
 
 ## 2️⃣ **Core Data Structures**
 
 ### 🔹 Linear Data Structures
-- [Arrays](./arrays.md)
-- [Linked Lists](./linked_list.md)
-- [Stacks](./stack.md)
-- [Queues](./queue.md)
+- [Arrays](../../src/DSA/Arrays/arrays.md)
+- [Linked Lists](../../src/DSA/LinkedList/linked-list.md)
+- [Stacks]
+- [Queues]
 
 ### 🔹 Hashing & Maps
-- [Hash Tables](./hash_tables.md)
-- [Collision Handling](./collision_handling.md)
-- [C++ `unordered_map` Internals](./cpp_unordered_map.md)
+- [Hash Tables]
+- [Collision Handling]
+- [C++ `unordered_map` Internals]
 
 ### 🔹 Trees
-- [Binary Trees](./binary_tree.md)
-- [Binary Search Trees](./bst.md)
-- [AVL Tree](./avl_tree.md)
-- [Trie](./trie.md)
-- [Heap / Priority Queue](./heap.md)
+- [Binary Trees]
+- [Binary Search Trees]
+- [AVL Tree]
+- [Trie]
+- [Heap / Priority Queue]
 
 ### 🔹 Graphs
-- [Graph Representations](./graph_representation.md)
-- [BFS / DFS](./graph_traversal.md)
-- [Topological Sort](./toposort.md)
-- [Dijkstra](./dijkstra.md)
-- [Union-Find DSU](./dsu.md)
+- [Graph Representations]
+- [BFS / DFS]
+- [Topological Sort]
+- [Dijkstra]
+- [Union-Find DSU]
 
 ---
 
 ## 3️⃣ **Algorithms**
 
 ### 🔹 Searching
-- [Linear Search](./linear_search.md)
-- [Binary Search + Variants](./binary_search.md)
+- [Binary Search + Variants](../../src/DSA/Searching-Sorting/searching-sorting.md)
 
 ### 🔹 Sorting
-- [Bubble / Selection / Insertion](./basic_sorts.md)
-- [Merge Sort](./merge_sort.md)
-- [Quick Sort](./quick_sort.md)
-- [Heap Sort](./heap_sort.md)
+- [Searching & Sorting Techniques](../../src/DSA/Searching-Sorting/sorting.md)
 
 ### 🔹 Dynamic Programming
-- [DP Basics](./dp_basics.md)
-- [1D DP Patterns](./dp_1d.md)
-- [2D Grid DP](./dp_grid.md)
-- [Knapsack Family](./knapsack.md)
-- [LCS / LIS / Edit Distance](./dp_strings.md)
+- [DP Basics]
+- [1D DP Patterns]
+- [2D Grid DP]
+- [Knapsack Family]
+- [LCS / LIS / Edit Distance]
 
 ### 🔹 Greedy Algorithms
-- [Greedy Strategy Basics](./greedy.md)
-- [Intervals Problems](./intervals.md)
-- [Huffman Coding](./huffman.md)
+- [Greedy Strategy Basics]
+- [Intervals Problems]
+- [Huffman Coding]
 
 ---
 
