@@ -59,6 +59,9 @@ Most used searching technique in interviews.
 
 - Koko eating bananas
 
+
+# [For Sorting Guide Click Here](sorting.md)
+
 ## 🧠 Practical Sorting Problems
 
 **Learn how sorting enables solutions:**
@@ -115,7 +118,7 @@ public:
 
 4. [Leetcode 744. Find Smallest Letter Greater Than Target](https://leetcode.com/problems/find-smallest-letter-greater-than-target/description/)
 
-This is similar to finding Ceil of an element in a Sorted Array.
+    - This is similar to finding Ceil of an element in a Sorted Array.
 
 ```cpp
 class Solution {
@@ -136,6 +139,9 @@ public:
     }
 };
 ```
+
+
+5. [Leetcode 169. Majority Element](https://leetcode.com/problems/majority-element/description/) - **[My Approach & Leetcode Solution link](https://leetcode.com/problems/majority-element/solutions/7418398/majority-element-step-by-step-intuition-woccs/)**
 
 
 
@@ -170,6 +176,23 @@ public:
 
 9. [Leetcode 852. Peak Index in a Mountain Array](https://leetcode.com/problems/peak-index-in-a-mountain-array/description/) - **[My Approach & Leetcode Solution link](https://leetcode.com/problems/peak-index-in-a-mountain-array/solutions/7413977/binary-search-on-increasingdecreasing-sl-w36n/)**
 
+10. [Search in a row wise and column wise sorted matrix](https://www.geeksforgeeks.org/dsa/search-in-row-wise-and-column-wise-sorted-matrix/) - **[My Approach and Solution](searchInSortedMatrix.pdf)
+
+11. [Leetcode 74. Search a 2D Matrix](https://leetcode.com/problems/search-a-2d-matrix/description/) - **[My Approach & Leetcode Solution link](https://leetcode.com/problems/search-a-2d-matrix/solutions/7415712/search-a-2d-matrix-double-binary-search-01x4d/)**
+
+12. [Allocate Minimum Pages](https://www.geeksforgeeks.org/dsa/allocate-minimum-number-pages/) - **[My Approach and Solution](allocateMinimumPages.md)**
+
+    - Binary search on value
+
+13. [Leetcode 875. Koko Eating Bananas](https://leetcode.com/problems/koko-eating-bananas/description/) - **[My Approach & Leetcode Solution link](https://leetcode.com/problems/koko-eating-bananas/solutions/7429088/binary-search-on-eating-speed-efficient-6ydvw/)**
+
+    - **For example visuals [CLICK HERE](koko-banana.pdf)**
+    - Binary search on value
+
+
+14. [Leetcode 981. Time Based Key-Value Store](https://leetcode.com/problems/time-based-key-value-store/description/) - **[My Approach & Leetcode Solution link](https://leetcode.com/problems/time-based-key-value-store/solutions/7429283/time-based-key-value-store-hashmap-order-k75k/)**
+
+
 
 
 
@@ -177,7 +200,11 @@ public:
 
 1. [Leetcode 1095. Find in Mountain Array](https://leetcode.com/problems/find-in-mountain-array/description/) - **[My Approach & Leetcode Solution link](https://leetcode.com/problems/find-in-mountain-array/solutions/7414067/binary-search-on-mountain-array-find-pea-s9fz/)**
 
-2. 
+2. [Leetcode 4. Median of Two Sorted Arrays](https://leetcode.com/problems/median-of-two-sorted-arrays/description/) - **[My Approach & Leetcode Solution link](https://leetcode.com/problems/median-of-two-sorted-arrays/solutions/7430537/median-of-two-sorted-arrays-binary-searc-hjg4/)**
+
+    - For visual examples **[Click Here](median-sorted-array.pdf)**
+
+
 
 
 

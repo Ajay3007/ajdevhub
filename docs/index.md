@@ -20,6 +20,7 @@ Welcome — a centralized place for my notes, tutorials and project links on C++
 - [VPP](vpp/index.md)
 - [Operating Systems](os/index.md)
 - [System Design](system-design/index.md)
+- [Recusrion](../src/recursion/recursion.md)
 
 ---
 
