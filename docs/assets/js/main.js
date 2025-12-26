@@ -30,4 +30,18 @@ document.addEventListener('DOMContentLoaded', function(){
       }
     } catch(e){ /* ignore invalid URLs */ }
   })
+
+  // Open downloads and mirrored source files (served under /src/ or /assets/pdfs/) in new tab
+  document.querySelectorAll('a[href]').forEach(a=>{
+    const href = a.getAttribute('href');
+    if(!href) return;
+    // Patterns for site-served source files and PDFs
+    const matchSrc = href.match(/(^|\/)src\//) || href.match(/\/assets\/pdfs\//);
+    if(matchSrc){
+      a.setAttribute('target','_blank');
+      a.setAttribute('rel','noopener noreferrer');
+      a.classList.add('external');
+      if(!a.title) a.title = 'Opens in a new tab';
+    }
+  })
 });
