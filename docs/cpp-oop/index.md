@@ -1,7 +1,7 @@
----
+﻿---
 title: C++ / OOP
 ---
-# 🚗 OOP in Modern C++ — Hands-On Examples
+# ðŸš— OOP in Modern C++ â€” Hands-On Examples
 
 ![C++17](https://img.shields.io/badge/C++-17-blue.svg)
 ![Platform](https://img.shields.io/badge/Platform-Windows%20%7C%20Linux-lightgrey)
@@ -25,23 +25,23 @@ This repository is built for **interview preparation**, **C++ learning**, and **
 
 ---
 
-# 📁 Project Structure
+# ðŸ“ Project Structure
 
 ```text
 oops/
-├── Main.cpp                         # Starter example / entry point
-├── shallow_vs_deep_copy/            # Deep copy vs shallow copy demos
-├── smart_pointers/                  # unique_ptr/shared_ptr/weak_ptr demos
-├── friend_function_vs_friend_class/ # Friend usage examples
-├── operator_overloading/            # Operator <<, +, ==, etc.
-├── .vscode/                         # Build tasks for VS Code
-├── [cpp_oop_interview_checklist.pdf](https://raw.githubusercontent.com/Ajay3007/ajdevhub/master/src/oops/cpp_oop_interview_checklist.pdf)
-├── [cpp_oop_interview_checklist_extended.pdf](https://raw.githubusercontent.com/Ajay3007/ajdevhub/master/src/oops/cpp_oop_interview_checklist_extended.pdf)
-└── README.md
+â”œâ”€â”€ Main.cpp                         # Starter example / entry point
+â”œâ”€â”€ shallow_vs_deep_copy/            # Deep copy vs shallow copy demos
+â”œâ”€â”€ smart_pointers/                  # unique_ptr/shared_ptr/weak_ptr demos
+â”œâ”€â”€ friend_function_vs_friend_class/ # Friend usage examples
+â”œâ”€â”€ operator_overloading/            # Operator <<, +, ==, etc.
+â”œâ”€â”€ .vscode/                         # Build tasks for VS Code
+â”œâ”€â”€ [cpp_oop_interview_checklist.pdf]({{ site.baseurl }}/assets/pdfs/oops/cpp_oop_interview_checklist.pdf)
+â”œâ”€â”€ [cpp_oop_interview_checklist_extended.pdf]({{ site.baseurl }}/assets/pdfs/oops/cpp_oop_interview_checklist_extended.pdf)
+â””â”€â”€ README.md
 ```
 
 # Concepts Demonstrated
-## ✔ Object-Oriented Fundamentals
+## âœ” Object-Oriented Fundamentals
 
 - Class, Object, Encapsulation
 
@@ -51,7 +51,7 @@ oops/
 
 - Access Specifiers: public / private / protected
 
-## ✔ Important C++ Concepts
+## âœ” Important C++ Concepts
 
 - Constructors / Destructors
 
@@ -69,7 +69,7 @@ oops/
 
 - RAII and memory safety
 
-## ✔ Interview-Oriented Topics
+## âœ” Interview-Oriented Topics
 
 - Overload resolution
 
@@ -79,7 +79,7 @@ oops/
 
 - When to use weak_ptr
 
-# 🧩 UML Diagrams (ASCII)
+# ðŸ§© UML Diagrams (ASCII)
 ## Friend Function vs Friend Class
 
 ```UML
@@ -118,9 +118,9 @@ shared_ptr  ---> reference counted shared ownership
 weak_ptr    ---> observer (non-owning reference)
 ```
 
-# 📚 Folder-by-Folder Usage
+# ðŸ“š Folder-by-Folder Usage
 
-## 🔹 shallow_vs_deep_copy/
+## ðŸ”¹ shallow_vs_deep_copy/
 
 ### Demonstrates:
 
@@ -130,7 +130,7 @@ weak_ptr    ---> observer (non-owning reference)
 
 - Rule of 3: destructor, copy constructor, copy assignment
 
-## 🔹 smart_pointers/
+## ðŸ”¹ smart_pointers/
 
 ### Shows:
 
@@ -140,7 +140,7 @@ weak_ptr    ---> observer (non-owning reference)
 
 - weak_ptr to avoid circular references
 
-## 🔹 friend_function_vs_friend_class/
+## ðŸ”¹ friend_function_vs_friend_class/
 
 ### Explains:
 
@@ -150,7 +150,7 @@ weak_ptr    ---> observer (non-owning reference)
 
 - Why friends should be used sparingly
 
-## 🔹 operator_overloading/
+## ðŸ”¹ operator_overloading/
 
 ### Examples:
 
@@ -168,11 +168,11 @@ weak_ptr    ---> observer (non-owning reference)
 
 [Car Simulation Project](https://ajay3007.github.io/car_project/)
 
-# 📄 Included PDF Checklists
+# ðŸ“„ Included PDF Checklists
 
-- [cpp_oop_interview_checklist.pdf](https://raw.githubusercontent.com/Ajay3007/ajdevhub/master/src/oops/cpp_oop_interview_checklist.pdf)
+- [cpp_oop_interview_checklist.pdf]({{ site.baseurl }}/assets/pdfs/oops/cpp_oop_interview_checklist.pdf)
 
-- [cpp_oop_interview_checklist_extended.pdf](https://raw.githubusercontent.com/Ajay3007/ajdevhub/master/src/oops/cpp_oop_interview_checklist_extended.pdf)
+- [cpp_oop_interview_checklist_extended.pdf]({{ site.baseurl }}/assets/pdfs/oops/cpp_oop_interview_checklist_extended.pdf)
 
 ## These contain:
 
@@ -188,12 +188,13 @@ weak_ptr    ---> observer (non-owning reference)
 
 - Perfect for fast revision before interviews.
 
-## 📄 License
+## ðŸ“„ License
 This project is open for educational use.
 
 ---
 
-## 👨‍💻 Author
+## ðŸ‘¨â€ðŸ’» Author
 Created by **Ajay Gupt** as part of C++ OOP learning and system design practice.
 
-If you like this repo, consider ⭐ starring it!
+If you like this repo, consider â­ starring it!
+
