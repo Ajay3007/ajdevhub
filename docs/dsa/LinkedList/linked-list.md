@@ -1,10 +1,11 @@
-```markdown
+﻿```markdown
 // copied from src/DSA/LinkedList/linked-list.md
-# 📘 Linked List — Complete Roadmap
+# ðŸ“˜ Linked List â€” Complete Roadmap
+{% include dsa-sidebar.html %}
 
-## ✅ 1. Linked List Fundamentals
+## âœ… 1. Linked List Fundamentals
 
-Start here — these concepts are mandatory.
+Start here â€” these concepts are mandatory.
 
 **Learn:**
 
@@ -25,7 +26,7 @@ struct ListNode {
 };
 ```
 
-## ✅ 2. Basic Operations (Hands-on)
+## âœ… 2. Basic Operations (Hands-on)
 
 Implement everything manually.
 
@@ -43,9 +44,9 @@ Implement everything manually.
 
 - Traverse list
 
-**🔑 Key skill:** pointer movement without losing nodes.
+**ðŸ”‘ Key skill:** pointer movement without losing nodes.
 
-## 🔥 3. Two-Pointer Techniques (MOST IMPORTANT)
+## ðŸ”¥ 3. Two-Pointer Techniques (MOST IMPORTANT)
 
 This is where most interview questions come from.
 
@@ -67,7 +68,7 @@ This is where most interview questions come from.
 
 4. Remove Nth Node from End (LC 19)
 
-## 🔁 4. Reversal Techniques
+## ðŸ” 4. Reversal Techniques
 
 Reversal questions are extremely common.
 
@@ -89,7 +90,7 @@ Reversal questions are extremely common.
 
 3. Reverse Nodes in K-Group (LC 25)
 
-## 🔗 5. Merge & Sort Linked Lists
+## ðŸ”— 5. Merge & Sort Linked Lists
 
 **Topics:**
 
@@ -99,7 +100,7 @@ Reversal questions are extremely common.
 
 - Sort List (LC 148)
 
-## 🧠 6. Advanced Linked List Patterns
+## ðŸ§  6. Advanced Linked List Patterns
 
 **Learn:**
 
@@ -119,7 +120,7 @@ Reversal questions are extremely common.
 
 3. Copy List with Random Pointer (LC 138)
 
-## 🚀 7. Linked List + Math / Edge Handling
+## ðŸš€ 7. Linked List + Math / Edge Handling
 
 - Add two numbers (LC 2)
 
@@ -127,7 +128,7 @@ Reversal questions are extremely common.
 
 - Rotate list (LC 61)
 
-## 🔨 Core Operations
+## ðŸ”¨ Core Operations
 
 - Insert at Head
 - Insert at End/Tail
@@ -137,5 +138,5 @@ Reversal questions are extremely common.
 - Delete by Value
 - Delete at Position
 
-**Refer [👉 THIS](linked-list-basic-ops.cpp) for above Operations' Implementation**
+**Refer [ðŸ‘‰ THIS](linked-list-basic-ops.cpp) for above Operations' Implementation**
 ```

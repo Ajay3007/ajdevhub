@@ -1,6 +1,7 @@
-```markdown
+﻿```markdown
 // copied from src/recursion/recursion.md
 # Recusrion
+{% include dsa-sidebar.html %}
 
 # Must Do Problems
 

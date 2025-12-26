@@ -1,8 +1,9 @@
-```markdown
+﻿```markdown
 // copied from src/DSA/Searching-Sorting/searching-sorting.md
-# 📘 Searching & Sorting
+# ðŸ“˜ Searching & Sorting
+{% include dsa-sidebar.html %}
 
-## ✅ 1. Linear Search (Basics)
+## âœ… 1. Linear Search (Basics)
 
 Even though simple, it's the foundation for understanding search operations.
 
@@ -15,7 +16,7 @@ Even though simple, it's the foundation for understanding search operations.
 - Searching unsorted arrays
 
 
-## ✅ 2. Binary Search (Important)
+## âœ… 2. Binary Search (Important)
 
 Most used searching technique in interviews.
 
@@ -44,7 +45,7 @@ Most used searching technique in interviews.
 - Binary search on monotonic functions
 
 
-## 🔥 Binary Search on Answer (Advanced)
+## ðŸ”¥ Binary Search on Answer (Advanced)
 
 **Used when:**
 
@@ -65,7 +66,7 @@ Most used searching technique in interviews.
 
 # [For Sorting Guide Click Here](sorting.md)
 
-## 🧠 Practical Sorting Problems
+## ðŸ§  Practical Sorting Problems
 
 **Learn how sorting enables solutions:**
 
@@ -89,9 +90,9 @@ Most used searching technique in interviews.
 
 - Kth smallest/largest (use sorting or heaps)
 
-# 📝 Must Do Practice Problems
+# ðŸ“ Must Do Practice Problems
 
-## 🔹 Level 1 – Easy
+## ðŸ”¹ Level 1 â€“ Easy
 
 1. [Leetcode 704. Binary Search](https://leetcode.com/problems/binary-search/description/)
 

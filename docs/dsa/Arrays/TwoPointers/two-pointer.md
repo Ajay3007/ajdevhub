@@ -1,6 +1,7 @@
 ﻿```markdown
 // copied from src/DSA/Arrays/TwoPointers/two-pointer.md
 # ðŸš€ Two Ponters Technique
+{% include dsa-sidebar.html %}
 
 - Two pointers = using two indices that move across an array/string to solve a problem efficiently.
 

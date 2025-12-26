@@ -1,9 +1,10 @@
-```markdown
+﻿```markdown
 // copied from src/DSA/Arrays/arrays.md
-# 🚀 Arrays Mastery Guide
+# ðŸš€ Arrays Mastery Guide
+{% include dsa-sidebar.html %}
 
-## ⭐ 1. Array Concepts You Must Master
-### 🔹 Basic Operations
+## â­ 1. Array Concepts You Must Master
+### ðŸ”¹ Basic Operations
 
 - Traversal
 
@@ -17,7 +18,7 @@
 
 - Using hash maps to optimize
 
-### 🔹 Core Patterns
+### ðŸ”¹ Core Patterns
 
 **Arrays revolve around 10 major patterns:**
 
@@ -31,7 +32,7 @@
 
 **5. Binary Search on Answer**
 
-**6. Kadane’s Algorithm**
+**6. Kadaneâ€™s Algorithm**
 
 **7. Sorting + Greedy**
 
@@ -43,7 +44,7 @@
 
 We will cover each with template + example.
 
-## ⭐ Must-Do Array Problems - Practice
+## â­ Must-Do Array Problems - Practice
 
 #### 1. [Leetcode 1. Two Sum](https://leetcode.com/problems/two-sum/description/)
 
@@ -68,13 +69,13 @@ We will cover each with template + example.
 #### 11. [Leetcode 41. First Missing Positive](https://leetcode.com/problems/first-missing-positive/description/)
 
 
-## ⭐ Pattern → Template → Example
+## â­ Pattern â†’ Template â†’ Example
 
-### 🔶 [Pattern 1: Sliding Window](SlidingWindow/sliding-window.md)
+### ðŸ”¶ [Pattern 1: Sliding Window](SlidingWindow/sliding-window.md)
 
 Sliding Window is used when we deal with **contiguous subarrays or substrings**.
 
-#### 📌 Template (Variable-size window)
+#### ðŸ“Œ Template (Variable-size window)
 
 ```cpp
 int left = 0;
@@ -90,16 +91,16 @@ for (int right = 0; right < n; right++) {
 }
 ```
 
-#### 📘 Example
+#### ðŸ“˜ Example
 
 1. [Longest substring without repeating characters](https://leetcode.com/problems/longest-substring-without-repeating-characters/description/)
 
 
-### 🔶 [Pattern 2: Two Pointers](TwoPointers/two-pointer.md)
+### ðŸ”¶ [Pattern 2: Two Pointers](TwoPointers/two-pointer.md)
 
 Used when array is sorted, or when you're searching for pairs.
 
-#### 📌 Template
+#### ðŸ“Œ Template
 
 ```cpp
 int left = 0, right = n - 1;
@@ -112,7 +113,7 @@ while (left < right) {
 }
 ```
 
-#### 📘 Example
+#### ðŸ“˜ Example
 
 Two Sum (sorted)
 
@@ -120,11 +121,11 @@ Two Sum (sorted)
 
 Container With Most Water
 
-### 🔶 Pattern 3: Prefix Sum
+### ðŸ”¶ Pattern 3: Prefix Sum
 
 Instant sum queries from index `l` to `r`.
 
-#### 📌 Template
+#### ðŸ“Œ Template
 
 ```cpp
 vector<int> pref(n+1, 0);
@@ -134,17 +135,17 @@ for (int i = 0; i < n; i++) pref[i+1] = pref[i] + arr[i];
 int sum = pref[r+1] - pref[l];
 ```
 
-#### 📘 Example
+#### ðŸ“˜ Example
 
 Subarray sum equals K
 
 Range sum queries
 
-### 🔶 Pattern 4: Kadane’s Algorithm
+### ðŸ”¶ Pattern 4: Kadaneâ€™s Algorithm
 
 Max subarray sum in O(n).
 
-#### 📌 Template
+#### ðŸ“Œ Template
 
 ```cpp
 int max_ending_here = 0, best = INT_MIN;
@@ -155,7 +156,7 @@ for (int x : arr) {
 }
 ```
 
-### 🔶 Pattern 5: Sorting + Greedy
+### ðŸ”¶ Pattern 5: Sorting + Greedy
 
 Used in:
 
@@ -165,11 +166,11 @@ Task scheduling
 
 Minimum arrows to burst balloons
 
-### 🔶 Pattern 6: Binary Search
+### ðŸ”¶ Pattern 6: Binary Search
 
 Used on sorted arrays.
 
-#### 📌 Standard Template
+#### ðŸ“Œ Standard Template
 
 ```cpp
 int l = 0, r = n - 1;
@@ -181,7 +182,7 @@ while (l <= r) {
 }
 ```
 
-### 🔶 Pattern 7: Binary Search on Answer
+### ðŸ”¶ Pattern 7: Binary Search on Answer
 
 Used when the array is not sorted but the answer lies in a monotonic search space.
 #### Examples:
@@ -192,7 +193,7 @@ Minimum pages allocation
 
 Aggressive cows
 
-### 🔶 Pattern 8: Intervals (Important!)
+### ðŸ”¶ Pattern 8: Intervals (Important!)
 
 Many array problems are actually interval problems.
 
@@ -202,7 +203,7 @@ Many array problems are actually interval problems.
 
 2. Merge or process based on end
 
-### 🔶 Pattern 9: Matrix as Array of Arrays
+### ðŸ”¶ Pattern 9: Matrix as Array of Arrays
 
 2D array concepts:
 
@@ -214,7 +215,7 @@ Many array problems are actually interval problems.
 
 - Simulation problems
 
-### 🔶 Pattern 10: Hashmap + Array Combo
+### ðŸ”¶ Pattern 10: Hashmap + Array Combo
 
 Most-used pattern in arrays.
 
