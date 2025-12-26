@@ -43,26 +43,36 @@ jobs:
         run: |
           node report-to-html.js || true
 
+      - name: Checkout (for push)
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+          persist-credentials: true
+
       - name: Commit artifacts to branch
         env:
           GIT_AUTHOR_NAME: 'github-actions[bot]'
           GIT_AUTHOR_EMAIL: '41898282+github-actions[bot]@users.noreply.github.com'
           GITHUB_BRANCH: 'visual-tests-artifacts'
         run: |
-          # ensure we can push
+          set -eux
           git config user.name "$GIT_AUTHOR_NAME"
           git config user.email "$GIT_AUTHOR_EMAIL"
-          # create or update branch
+          # ensure authenticated remote (use GITHUB_TOKEN)
+          git remote set-url origin "https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}.git"
           git fetch origin $GITHUB_BRANCH || true
           git checkout -B $GITHUB_BRANCH
-          # copy artifacts into a run-specific subfolder
+          # prepare directory for this run
+          rm -rf artifacts/visual-tests/${{ github.run_id }} || true
           mkdir -p artifacts/visual-tests/${{ github.run_id }}
           cp -R tools/visual-tests/screenshots artifacts/visual-tests/${{ github.run_id }}/screenshots || true
           cp -R tools/visual-tests/reports artifacts/visual-tests/${{ github.run_id }}/reports || true
           cp tools/visual-tests/report-to-html.js artifacts/visual-tests/${{ github.run_id }}/ || true
           git add artifacts/visual-tests/${{ github.run_id }} || true
           git commit -m "ci(tests): add visual test artifacts from run ${{ github.run_id }}" || echo "No changes to commit"
-          git push origin $GITHUB_BRANCH --force
+          git push origin HEAD:$GITHUB_BRANCH --force
+          echo "Artifacts pushed to branch: $GITHUB_BRANCH"
+          git ls-tree -r --name-only HEAD | sed -n '1,200p'
 
       - name: Zip visual test artifacts
         working-directory: ${{ github.workspace }}
