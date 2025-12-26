@@ -97,7 +97,7 @@ Reversal questions are extremely common.
 
 - Sort List (LC 148)
 
-## 🧠 6. Advanced Linked List Patterns
+## <img src="/ajdevhub/assets/icons/brain.svg" class="inline-icon" alt=""> 6. Advanced Linked List Patterns
 
 **Learn:**
 
@@ -117,7 +117,7 @@ Reversal questions are extremely common.
 
 3. Copy List with Random Pointer (LC 138)
 
-## 🚀 7. Linked List + Math / Edge Handling
+## <img src="/ajdevhub/assets/icons/rocket.svg" class="inline-icon" alt=""> 7. Linked List + Math / Edge Handling
 
 - Add two numbers (LC 2)
 

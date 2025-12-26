@@ -1,4 +1,4 @@
-# 🚀 Two Ponters Technique
+# <img src="/ajdevhub/assets/icons/rocket.svg" class="inline-icon" alt=""> Two Ponters Technique
 
 - Two pointers = using two indices that move across an array/string to solve a problem efficiently.
 

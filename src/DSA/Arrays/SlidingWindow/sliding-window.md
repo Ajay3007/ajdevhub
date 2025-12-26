@@ -1,4 +1,4 @@
-# 🚀 Sliding Window
+# <img src="/ajdevhub/assets/icons/rocket.svg" class="inline-icon" alt=""> Sliding Window
 
 Sliding Window is used when we deal with **contiguous subarrays or substrings**.
 

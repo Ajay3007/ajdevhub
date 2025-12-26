@@ -1,4 +1,4 @@
-# 🚀 Sorting Master Guide (Interview-Focused)
+# <img src="/ajdevhub/assets/icons/rocket.svg" class="inline-icon" alt=""> Sorting Master Guide (Interview-Focused)
 
 ## Sorting Algorithms You MUST Know (Interview Level)
 
@@ -150,7 +150,7 @@ Exactly how you sort playing cards in hand.
 
 C++ STL sort() uses **Introsort**, a hybrid algorithm combining **Quick Sort, Heap Sort, and Insertion Sort**.
 
-#### 🧠 What Is Introsort? (Deep but Clear)
+#### <img src="/ajdevhub/assets/icons/brain.svg" class="inline-icon" alt=""> What Is Introsort? (Deep but Clear)
 
 **Introsort** (Introspective Sort) starts like **Quick Sort**, but:
 
@@ -171,7 +171,7 @@ To guarantee:
 
 - High practical performance
 
-#### 🧩 STL sort() Strategy (Step-by-Step)
+#### <img src="/ajdevhub/assets/icons/puzzle.svg" class="inline-icon" alt=""> STL sort() Strategy (Step-by-Step)
 
 1. Start with Quick Sort
 
@@ -241,7 +241,7 @@ Q: Why not use merge sort always?
 
     - Work at each level: `n`
 
-3.  🧠 Space Complexity
+3.  <img src="/ajdevhub/assets/icons/brain.svg" class="inline-icon" alt=""> Space Complexity
 
     - Extra array: O(n)
 
