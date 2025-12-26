@@ -1,0 +1,56 @@
+name: Visual & Accessibility Tests
+
+on:
+  workflow_dispatch: {}
+  push:
+    branches: [ master ]
+
+jobs:
+  visual-tests:
+    runs-on: ubuntu-latest
+    name: Run Playwright screenshots and axe audits
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '18'
+
+      - name: Install dependencies
+        working-directory: tools/visual-tests
+        run: |
+          npm ci
+
+      - name: Install Playwright browsers
+        working-directory: tools/visual-tests
+        run: |
+          npx playwright install chromium
+
+      - name: Run screenshots
+        working-directory: tools/visual-tests
+        run: |
+          npm run screenshot
+
+      - name: Run accessibility audit
+        working-directory: tools/visual-tests
+        run: |
+          npm run a11y
+
+      - name: Convert axe JSON to HTML
+        working-directory: tools/visual-tests
+        run: |
+          node report-to-html.js || true
+
+      - name: Upload screenshots
+        uses: actions/upload-artifact@v4
+        with:
+          name: visual-screenshots
+          path: tools/visual-tests/screenshots/
+
+      - name: Upload axe reports
+        uses: actions/upload-artifact@v4
+        with:
+          name: axe-reports
+          path: tools/visual-tests/reports/
