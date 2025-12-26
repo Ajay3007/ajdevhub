@@ -19,5 +19,6 @@ Run accessibility audit
 
 Notes
 - The screenshot script captures desktop (1280x800), mobile (iPhone 12) and a dark-mode desktop snapshot.
+- The screenshot script captures desktop (1280x800), mobile (iPhone 12), a bold-theme desktop snapshot, and dark-mode / dark+bold snapshots.
 - The a11y script executes axe-core on each page and writes JSON output for analysis.
 - If you want, I can add a small script to convert the axe JSON into a human-readable HTML report.

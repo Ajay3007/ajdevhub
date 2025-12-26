@@ -20,6 +20,16 @@ const base = 'https://ajay3007.github.io/ajdevhub';
   }
   await context.close();
 
+  // Desktop bold variant
+  const bctx = await browser.newContext({ viewport: { width: 1280, height: 800 } });
+  const bpage = await bctx.newPage();
+  for (const p of pages) {
+    await bpage.goto(base + p, { waitUntil: 'networkidle' });
+    await bpage.evaluate(() => document.documentElement.setAttribute('data-theme-strength', 'bold'));
+    await bpage.screenshot({ path: path.join(OUT, `desktop-bold${p === '/' ? 'home' : p.replace(/\//g, '')}.png`), fullPage: true });
+  }
+  await bctx.close();
+
   // Mobile (iPhone 12-like)
   const iPhone = devices['iPhone 12'] || devices['iPhone 12 Pro'];
   const mctx = await browser.newContext({ ...iPhone });
@@ -40,6 +50,19 @@ const base = 'https://ajay3007.github.io/ajdevhub';
     await dpage.screenshot({ path: path.join(OUT, `dark${p === '/' ? 'home' : p.replace(/\//g, '')}.png`), fullPage: true });
   }
   await dctx.close();
+
+  // Dark + bold variant
+  const dbctx = await browser.newContext({ viewport: { width: 1280, height: 800 } });
+  const dbpage = await dbctx.newPage();
+  for (const p of pages) {
+    await dbpage.goto(base + p, { waitUntil: 'networkidle' });
+    await dbpage.evaluate(() => {
+      document.documentElement.setAttribute('data-theme', 'dark');
+      document.documentElement.setAttribute('data-theme-strength', 'bold');
+    });
+    await dbpage.screenshot({ path: path.join(OUT, `dark-bold${p === '/' ? 'home' : p.replace(/\//g, '')}.png`), fullPage: true });
+  }
+  await dbctx.close();
 
   await browser.close();
   console.log('Screenshots saved to', OUT);

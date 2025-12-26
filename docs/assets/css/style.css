@@ -13,37 +13,39 @@ body{margin:0;font-family:Inter,Segoe UI,Roboto,Helvetica,Arial,sans-serif;backg
   radial-gradient(900px 420px at 15% 18%, rgba(14,165,164,0.06), transparent),
   radial-gradient(700px 320px at 88% 82%, rgba(16,185,129,0.05), transparent),
   linear-gradient(180deg,var(--bg),#EAFAF6);color:var(--text);line-height:1.6}
-.hero-title, h1, h2, h3 { font-family: 'Poppins', Inter, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial; }
-.wrap{max-width:980px;margin:0 auto;padding:1.25rem}
-.site-header{background:linear-gradient(90deg,rgba(255,255,255,0.02),transparent);backdrop-filter: blur(6px);border-bottom:1px solid rgba(255,255,255,0.03)}
-.site-header .wrap{display:flex;align-items:center;gap:1rem}
-.brand{font-weight:700;color:var(--text);text-decoration:none;font-size:1.15rem}
-.main-nav{margin-left:auto;display:flex;gap:0.75rem}
-.main-nav a{color:var(--muted);text-decoration:none;padding:0.5rem;border-radius:6px}
-.main-nav a:hover{color:var(--text);background:rgba(255,255,255,0.02)}
-.nav-item{position:relative}
-.nav-item .drop-toggle{display:inline-flex;align-items:center;gap:.4rem}
-.nav-dropdown{position:absolute;top:calc(100% + 8px);left:0;padding:.75rem;border-radius:12px;background:var(--card);border:1px solid rgba(2,6,23,0.06);box-shadow:0 12px 40px rgba(2,6,23,0.06);min-width:420px;display:none}
-.nav-item:hover .nav-dropdown,.nav-item.open .nav-dropdown,.nav-item:focus-within .nav-dropdown{display:block}
-.dropdown-grid{display:grid;grid-template-columns:repeat(2,minmax(180px,1fr));gap:.5rem}
+  :root{
+    /* Forest Teal theme (light) — tuned for better contrast */
+    --bg: #F2FBF9; /* slightly richer than before */
+    --card: #FBFEFF; /* subtle separation from page bg */
+
+    --muted: #3F4B57; /* darker muted text for improved legibility */
+    --accent: #10B981;
+    --accent-2: #0EA5A4;
+    --text: #07121A; /* darker main text */
+
+    --glass: rgba(255,255,255,0.03);
+    --bg-transition: background-color 240ms ease, color 200ms ease;
+  }
 .nav-dropdown .nav-card{padding:.6rem;border-radius:10px;border:1px solid rgba(2,6,23,0.04);box-shadow:none;background:transparent}
 .nav-dropdown .nav-card h4{margin:0 0 .25rem;font-size:0.95rem}
 .nav-dropdown .nav-card p{font-size:0.85rem;margin:0;color:var(--muted)}
 .nav-card img.icon, .nav-card .icon{width:36px;height:36px;display:block;border-radius:8px;object-fit:contain}
+  body{margin:0;font-family:Inter,Segoe UI,Roboto,Helvetica,Arial,sans-serif;background-color:var(--bg);transition:var(--bg-transition);background-image:
+    radial-gradient(900px 420px at 15% 18%, rgba(14,165,164,0.10), transparent),
+    radial-gradient(700px 320px at 88% 82%, rgba(16,185,129,0.08), transparent),
+    linear-gradient(180deg,var(--bg),#EAFAF6);color:var(--text);line-height:1.6}
 .nav-card .icon{display:flex;align-items:center;justify-content:center}
 
-/* Adjustments for small screens */
-@media (max-width:720px){
+  .site-header{background:linear-gradient(90deg,rgba(255,255,255,0.04),transparent);backdrop-filter: blur(4px);border-bottom:1px solid rgba(255,255,255,0.06)}
   .nav-dropdown{position:static;min-width:auto;margin-top:.5rem}
   .dropdown-grid{grid-template-columns:repeat(auto-fit,minmax(140px,1fr))}
-}
+  .hero{padding:3rem 0;position:relative}
+  .hero::after{content:'';position:absolute;inset:0;background:linear-gradient(180deg,rgba(12,16,24,0.55),transparent);pointer-events:none;border-radius:0}
+  .hero .wrap{position:relative;z-index:2}
 
-/* Visible focus outline for keyboard users */
-.drop-toggle:focus{outline:2px solid var(--accent);outline-offset:3px;border-radius:6px}
-
+  .card{background:linear-gradient(180deg,rgba(2,6,23,0.02),rgba(2,6,23,0.01));padding:1.25rem;border-radius:14px;border:1px solid rgba(2,6,23,0.06);box-shadow:0 10px 34px rgba(2,6,23,0.08);transition:transform .18s ease, box-shadow .18s ease}
 /* Skip link - hidden offscreen but visible when focused */
-.skip-link{position:absolute;left:-999px;top:auto;width:1px;height:1px;overflow:hidden}
-.skip-link:focus{position:fixed;left:1rem;top:1rem;width:auto;height:auto;padding:.5rem 1rem;background:var(--card);border:1px solid rgba(2,6,23,0.06);border-radius:6px;box-shadow:0 6px 20px rgba(2,6,23,0.06);z-index:999}
+  .post-card{background:linear-gradient(180deg,rgba(255,255,255,0.02),rgba(255,255,255,0.015));padding:1rem;border-radius:12px;border:1px solid var(--glass);box-shadow:0 8px 28px rgba(2,6,23,0.12);transition:transform .18s ease}
 .nav-toggle{display:none;background:none;border:0;color:var(--text);font-size:1.25rem}
 .hero{padding:3rem 0;background:linear-gradient(180deg,rgba(12,16,24,0.4),transparent)}
 .hero-title{font-size:2.25rem;margin:0 0 .5rem}
@@ -53,6 +55,21 @@ body{margin:0;font-family:Inter,Segoe UI,Roboto,Helvetica,Arial,sans-serif;backg
 .btn.ghost{background:transparent;border:1px solid rgba(255,255,255,0.04);color:var(--text)}
 .content{padding:2rem 0}
 .card-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:1rem}
+
+  /* Theme strength: bold variant for users that prefer a punchier look */
+  [data-theme-strength="bold"]{
+    --bg:#E6FBF9; /* slightly brighter backdrop for bold accent */
+    --card:#FFFFFF;
+    --text:#05101a;
+    --muted:#36414a;
+  }
+
+  /* Bold + dark combo tweaks */
+  [data-theme="dark"][data-theme-strength="bold"]{
+    --bg:#061126; /* a touch lighter in dark mode to let accents pop */
+    --card:#071421;
+    --muted:#9fb0c8;
+  }
 .card{background:linear-gradient(180deg,rgba(2,6,23,0.02),rgba(2,6,23,0.01));padding:1.25rem;border-radius:14px;border:1px solid rgba(2,6,23,0.06);box-shadow:0 8px 30px rgba(2,6,23,0.06);transition:transform .18s ease, box-shadow .18s ease}
 .card:hover{transform:translateY(-6px);box-shadow:0 18px 50px rgba(2,6,23,0.06)}
 .card h3{margin:.25rem 0;color:var(--text);font-weight:600}

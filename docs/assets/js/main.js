@@ -62,6 +62,33 @@ document.addEventListener('DOMContentLoaded', function(){
     localStorage.setItem('ajdevhub-theme', next);
   })
 
+  // Theme strength toggle: subtle (default) vs bold (stronger contrasts)
+  const strengthToggle = document.getElementById('theme-strength-toggle');
+  const savedStrength = localStorage.getItem('ajdevhub-theme-strength');
+  const applyStrength = (s)=>{
+    if(s === 'bold') root.setAttribute('data-theme-strength','bold');
+    else root.removeAttribute('data-theme-strength');
+  };
+  // Default to subtle unless saved
+  if(savedStrength) applyStrength(savedStrength);
+  else applyStrength('subtle');
+  if(strengthToggle){
+    // reflect state on the button title
+    const updateBtn = ()=>{
+      const isBold = root.getAttribute('data-theme-strength') === 'bold';
+      strengthToggle.setAttribute('aria-pressed', isBold ? 'true' : 'false');
+      strengthToggle.title = isBold ? 'Using bold theme (click to switch to subtle)' : 'Using subtle theme (click to switch to bold)';
+    };
+    updateBtn();
+    strengthToggle.addEventListener('click', ()=>{
+      const isBold = root.getAttribute('data-theme-strength') === 'bold';
+      const next = isBold ? 'subtle' : 'bold';
+      applyStrength(next);
+      localStorage.setItem('ajdevhub-theme-strength', next);
+      updateBtn();
+    })
+  }
+
   // Replace nav card emoji icons with inline SVGs for crisp UI (if any nav cards use img with data-icon attr).
   // Use the base path exposed by Jekyll in window._SITE_BASE so this JS file doesn't need Liquid templating.
   const ICON_BASE = (window._SITE_BASE || '') + '/assets/icons/';
