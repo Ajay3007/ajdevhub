@@ -19,7 +19,8 @@ jobs:
       - name: Sync markdown and assets from src to docs
         run: |
           mkdir -p docs/src
-          rsync -av --include='*/' --include='*.md' --include='*.pdf' --include='*.png' --include='*.svg' --exclude='*' src/ docs/src/
+          # include common code and asset file types so code examples and resources are available on the site
+          rsync -av --include='*/' --include='*.md' --include='*.pdf' --include='*.png' --include='*.svg' --include='*.cpp' --include='*.c' --include='*.h' --include='*.hpp' --include='*.py' --include='*.java' --include='*.txt' --exclude='*' src/ docs/src/
           mkdir -p docs/assets/pdfs
           rsync -av --include='*/' --include='*.pdf' --exclude='*' src/ docs/assets/pdfs/
 
