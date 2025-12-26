@@ -70,7 +70,14 @@ jobs:
           cp tools/visual-tests/report-to-html.js artifacts/visual-tests/${{ github.run_id }}/ || true
           git add artifacts/visual-tests/${{ github.run_id }} || true
           git commit -m "ci(tests): add visual test artifacts from run ${{ github.run_id }}" || echo "No changes to commit"
-          git push origin HEAD:$GITHUB_BRANCH --force
+          if ! git push origin HEAD:$GITHUB_BRANCH --force; then
+            echo "GIT PUSH FAILED with exit code $?"
+            git remote -v
+            git branch -vv
+            git status --porcelain=2 --branch || true
+            ls -la artifacts/visual-tests/${{ github.run_id }} || true
+            exit 1
+          fi
           echo "Artifacts pushed to branch: $GITHUB_BRANCH"
           git ls-tree -r --name-only HEAD | sed -n '1,200p'
 
