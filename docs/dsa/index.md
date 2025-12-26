@@ -22,13 +22,13 @@ This section is part of my broader learning journey across Systems, Networking, 
 
 ## 📌 A. Core Data Structures
 
-- [Arrays](../../src/DSA/Arrays/arrays.md)
+- [Arrays](Arrays/arrays.md)
 
-- [strings](../../src/DSA/Strings/string.md)
+- [strings](Strings/string.md)
 
 - [Hash maps / hash sets]
 
-- [Linked Lists](../../src/DSA/LinkedList/linked-list.md)
+- [Linked Lists](LinkedList/linked-list.md)
 
 - [Stacks & queues]
 
@@ -46,11 +46,11 @@ This section is part of my broader learning journey across Systems, Networking, 
 
 ## 📌 B. Algorithms
 
-- [Searching & Sorting (binary search patterns, custom comparator, stable sort, counting sort)](../../src/DSA/Searching-Sorting/searching-sorting.md)
+- [Searching & Sorting (binary search patterns, custom comparator, stable sort, counting sort)](Searching-Sorting/searching-sorting.md)
 
-- [Sliding window](../../src/DSA/Arrays/SlidingWindow/sliding-window.md)
+- [Sliding window](Arrays/SlidingWindow/sliding-window.md)
 
-- [Two pointers](../../src/DSA/Arrays/TwoPointers/two-pointer.md)
+- [Two pointers](Arrays/TwoPointers/two-pointer.md)
 
 - [Backtracking]
 
@@ -70,7 +70,7 @@ This section is part of my broader learning journey across Systems, Networking, 
 # 📚 Table of Contents
 
 ## 1️⃣ **Basics**
-- [Recursion Deep Dive](../../src/recursion/recursion.md)
+- [Recursion Deep Dive](recursion/recursion.md)
 - [Memory Layout & Stack vs Heap]
 
 ---
@@ -78,8 +78,8 @@ This section is part of my broader learning journey across Systems, Networking, 
 ## 2️⃣ **Core Data Structures**
 
 ### 🔹 Linear Data Structures
-- [Arrays](../../src/DSA/Arrays/arrays.md)
-- [Linked Lists](../../src/DSA/LinkedList/linked-list.md)
+- [Arrays](Arrays/arrays.md)
+- [Linked Lists](LinkedList/linked-list.md)
 - [Stacks]
 - [Queues]
 
@@ -107,10 +107,10 @@ This section is part of my broader learning journey across Systems, Networking, 
 ## 3️⃣ **Algorithms**
 
 ### 🔹 Searching
-- [Binary Search + Variants](../../src/DSA/Searching-Sorting/searching-sorting.md)
+- [Binary Search + Variants](Searching-Sorting/searching-sorting.md)
 
 ### 🔹 Sorting
-- [Searching & Sorting Techniques](../../src/DSA/Searching-Sorting/sorting.md)
+- [Searching & Sorting Techniques](Searching-Sorting/sorting.md)
 
 ### 🔹 Dynamic Programming
 - [DP Basics]
