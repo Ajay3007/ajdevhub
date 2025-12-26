@@ -16,6 +16,7 @@
     <script defer src="{{ '/assets/js/main.js' | relative_url }}"></script>
   </head>
   <body>
+    <a class="skip-link" href="#main-content">Skip to content</a>
     <header class="site-header">
       <div class="wrap">
         <a class="brand" href="{{ site.baseurl | default: '/' }}">{{ site.title }}</a>
@@ -24,7 +25,7 @@
 
           <div class="nav-item has-dropdown">
             <a href="{{ site.baseurl }}/learning/" class="drop-toggle" aria-expanded="false">Learning ▾</a>
-            <div class="nav-dropdown" aria-hidden="true">
+              <div id="learning-dropdown" class="nav-dropdown" aria-hidden="true">
               <div class="dropdown-grid">
                 <a class="nav-card" href="{{ site.baseurl }}/cpp-oop/" data-icon="cpp">
                   <img src="{{ '/assets/icons/cpp.svg' | relative_url }}" class="icon" alt="C++">
@@ -82,7 +83,7 @@
       </div>
     </header>
 
-    <main class="site-main">
+      <main id="main-content" class="site-main">
       <section class="hero">
         <div class="wrap">
           <h1 class="hero-title">{{ page.title | default: site.title }}</h1>

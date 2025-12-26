@@ -40,6 +40,10 @@ body{margin:0;font-family:Inter,Segoe UI,Roboto,Helvetica,Arial,sans-serif;backg
 
 /* Visible focus outline for keyboard users */
 .drop-toggle:focus{outline:2px solid var(--accent);outline-offset:3px;border-radius:6px}
+
+/* Skip link - hidden offscreen but visible when focused */
+.skip-link{position:absolute;left:-999px;top:auto;width:1px;height:1px;overflow:hidden}
+.skip-link:focus{position:fixed;left:1rem;top:1rem;width:auto;height:auto;padding:.5rem 1rem;background:var(--card);border:1px solid rgba(2,6,23,0.06);border-radius:6px;box-shadow:0 6px 20px rgba(2,6,23,0.06);z-index:999}
 .nav-toggle{display:none;background:none;border:0;color:var(--text);font-size:1.25rem}
 .hero{padding:3rem 0;background:linear-gradient(180deg,rgba(12,16,24,0.4),transparent)}
 .hero-title{font-size:2.25rem;margin:0 0 .5rem}
