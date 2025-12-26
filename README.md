@@ -28,3 +28,7 @@ Visit the site : [👉 HERE](https://ajay3007.github.io/ajdevhub/)
 
 ## [Recusrion](/src/recursion/recursion.md)
 
+---
+
+Note: I moved DSA notes into `docs/dsa/` so they render on the GitHub Pages site and fixed internal links. If you make edits under `src/DSA/` in the future, consider syncing them into `docs/dsa/` to keep the site up-to-date.
+
