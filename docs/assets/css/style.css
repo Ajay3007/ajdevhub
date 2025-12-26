@@ -131,6 +131,12 @@ body{margin:0;font-family:Inter,Segoe UI,Roboto,Helvetica,Arial,sans-serif;backg
 /* external link marker */
 a.external::after{content:' \2197';font-size:0.85em;margin-left:0.35rem;opacity:0.9}
 
+/* Ensure anchors use theme colors (prevent browser default purple visited links) */
+a, a:visited{color:var(--accent-2);text-decoration:none}
+a:hover,a:focus{color:var(--accent);text-decoration:underline}
+.main-nav a, .main-nav a:visited{color:var(--muted)}
+.main-nav a:hover, .main-nav a:focus{color:var(--text);background:rgba(255,255,255,0.02)}
+
 /* DSA sidebar */
 .dsa-nav{background:linear-gradient(180deg,rgba(255,255,255,0.02),transparent);padding:1rem;border-radius:8px;border:1px solid rgba(255,255,255,0.03);margin-bottom:1rem}
 .dsa-nav h4{margin:0 0 .5rem}
