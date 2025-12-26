@@ -73,37 +73,6 @@ Explore topics with quick-access cards — click to open any section.
 
 ---
 
-## 📚 Guided Learning Paths
-
-If you're new, follow one of these paths:
-
-<div class="card-grid">
-  <div class="card">
-    <h3>🧑‍💻 C++ → Systems</h3>
-    <p class="muted">
-      Start from modern C++, move into OOP, memory, and low-level design.
-    </p>
-    <p><a href="{{ site.baseurl }}/cpp-oop/">Start →</a></p>
-  </div>
-
-  <div class="card">
-    <h3>🌐 Networking → DPDK</h3>
-    <p class="muted">
-      TCP/IP basics → packet processing → DPDK internals.
-    </p>
-    <p><a href="{{ site.baseurl }}/networking/">Start →</a></p>
-  </div>
-
-  <div class="card">
-    <h3>🏗 System Design</h3>
-    <p class="muted">
-      Learn scalable architectures with systems-first thinking.
-    </p>
-    <p><a href="{{ site.baseurl }}/system-design/">Start →</a></p>
-  </div>
-</div>
-
- ---
 
 ## About
 This site gathers tutorials, example code, diagrams, and notes from my learning journey. Each topic links to code repositories where appropriate.
