@@ -15,49 +15,49 @@ Welcome — a centralized place for my notes, tutorials and project links on C++
 Explore topics with quick-access cards — click to open any section.
 
 <div class="quick-grid">
-	<div class="nav-card">
+	<div class="nav-card" data-icon="cpp">
 		<div class="icon">💠</div>
 		<h4>C++ Concepts</h4>
 		<p class="muted">Language features, modern C++ idioms and examples.</p>
 		<a class="link-cta" href="{{ site.baseurl }}/cpp-concepts/">Open</a>
 	</div>
-	<div class="nav-card">
+	<div class="nav-card" data-icon="dsa">
 		<div class="icon">🧠</div>
 		<h4>DSA</h4>
 		<p class="muted">Data structures, patterns and problem-solving templates.</p>
 		<a class="link-cta" href="{{ site.baseurl }}/dsa/">Open</a>
 	</div>
-	<div class="nav-card">
+	<div class="nav-card" data-icon="oop">
 		<div class="icon">🏗️</div>
 		<h4>OOP</h4>
 		<p class="muted">Object-oriented design patterns and practical projects.</p>
 		<a class="link-cta" href="{{ site.baseurl }}/cpp-oop/">Open</a>
 	</div>
-	<div class="nav-card">
+	<div class="nav-card" data-icon="network">
 		<div class="icon">🌐</div>
 		<h4>Networking</h4>
 		<p class="muted">Routing, protocols, and practical network examples.</p>
 		<a class="link-cta" href="{{ site.baseurl }}/networking/">Open</a>
 	</div>
-	<div class="nav-card">
+	<div class="nav-card" data-icon="dpdk">
 		<div class="icon">⚡</div>
 		<h4>DPDK</h4>
 		<p class="muted">DPDK concepts, memory model and sample apps.</p>
 		<a class="link-cta" href="{{ site.baseurl }}/dpdk/">Open</a>
 	</div>
-	<div class="nav-card">
+	<div class="nav-card" data-icon="vpp">
 		<div class="icon">🚀</div>
 		<h4>VPP</h4>
 		<p class="muted">VPP node examples and forwarding pipelines.</p>
 		<a class="link-cta" href="{{ site.baseurl }}/vpp/">Open</a>
 	</div>
-	<div class="nav-card">
+	<div class="nav-card" data-icon="os">
 		<div class="icon">🧩</div>
 		<h4>Operating Systems</h4>
 		<p class="muted">Process, memory, and concurrency internals.</p>
 		<a class="link-cta" href="{{ site.baseurl }}/os/">Open</a>
 	</div>
-	<div class="nav-card">
+	<div class="nav-card" data-icon="system">
 		<div class="icon">🧭</div>
 		<h4>System Design</h4>
 		<p class="muted">High-level system architecture and patterns.</p>

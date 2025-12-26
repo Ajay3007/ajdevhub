@@ -3,6 +3,7 @@ title: "Welcome to my blog"
 date: 2025-12-26 09:00:00 +0530
 layout: default
 excerpt: "Short updates, tutorials and notes on C++, DPDK, VPP, networking and system design."
+image: "/assets/images/posts/welcome.svg"
 ---
 
 Hello! This is the first post in the Ajay's Dev Hub blog. I'll share short tutorials, insights from projects, and notes on systems programming and networking.

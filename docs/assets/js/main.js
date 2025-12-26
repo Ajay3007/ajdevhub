@@ -44,4 +44,32 @@ document.addEventListener('DOMContentLoaded', function(){
       if(!a.title) a.title = 'Opens in a new tab';
     }
   })
+
+  // Theme toggle (prefers saved choice, or system preference)
+  const themeToggle = document.getElementById('theme-toggle');
+  const root = document.documentElement;
+  const saved = localStorage.getItem('ajdevhub-theme');
+  const applyTheme = (t)=>{ if(t === 'dark') root.setAttribute('data-theme','dark'); else root.removeAttribute('data-theme'); };
+  if(saved) applyTheme(saved);
+  else {
+    const prefersDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
+    applyTheme(prefersDark ? 'dark' : 'light');
+  }
+  themeToggle && themeToggle.addEventListener('click', ()=>{
+    const isDark = root.getAttribute('data-theme') === 'dark';
+    const next = isDark ? 'light' : 'dark';
+    applyTheme(next);
+    localStorage.setItem('ajdevhub-theme', next);
+  })
+
+  // Replace nav card emoji icons with inline SVGs for crisp UI (if any nav cards use img with data-icon attr)
+  document.querySelectorAll('.nav-card[data-icon]').forEach(card=>{
+    const name = card.getAttribute('data-icon');
+    const img = document.createElement('img');
+    img.src = (new URL(`{{ '/assets/icons/' | relative_url }}${name}.svg`, location.href)).href;
+    img.className = 'icon';
+    img.alt = name;
+    const first = card.querySelector('.icon');
+    if(first) first.replaceWith(img); else card.insertBefore(img, card.firstChild);
+  })
 });
