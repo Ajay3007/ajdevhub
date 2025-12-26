@@ -128,7 +128,7 @@ This section is part of my broader learning journey across Systems, Networking, 
 
 ---
 
-# 🧩 C++ Code Standards for DSA
+# <img src="{{ '/assets/icons/cpp.svg' | relative_url }}" class="inline-icon" alt=""> C++ Code Standards for DSA
 
 To maintain consistency across all DSA notes, all C++ code follows:
 
