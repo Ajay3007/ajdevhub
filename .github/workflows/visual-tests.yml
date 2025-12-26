@@ -43,6 +43,39 @@ jobs:
         run: |
           node report-to-html.js || true
 
+      - name: Zip visual test artifacts
+        working-directory: ${{ github.workspace }}
+        run: |
+          apt-get update && apt-get install -y zip || true
+          zip -r visual-tests-${{ github.run_id }}-screenshots.zip tools/visual-tests/screenshots || true
+          zip -r visual-tests-${{ github.run_id }}-reports.zip tools/visual-tests/reports tools/visual-tests/reports/home.html || true
+
+      - name: Create GitHub release
+        id: create_release
+        uses: softprops/action-gh-release@v1
+        with:
+          name: "Visual Tests ${{ github.run_id }}"
+          tag_name: "visual-tests-${{ github.run_id }}"
+          body: "Visual test artifacts for run ${{ github.run_id }}"
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Upload screenshots to release
+        uses: actions/upload-release-asset@v1
+        with:
+          upload_url: ${{ steps.create_release.outputs.upload_url }}
+          asset_path: visual-tests-${{ github.run_id }}-screenshots.zip
+          asset_name: visual-tests-${{ github.run_id }}-screenshots.zip
+          asset_content_type: application/zip
+
+      - name: Upload reports to release
+        uses: actions/upload-release-asset@v1
+        with:
+          upload_url: ${{ steps.create_release.outputs.upload_url }}
+          asset_path: visual-tests-${{ github.run_id }}-reports.zip
+          asset_name: visual-tests-${{ github.run_id }}-reports.zip
+          asset_content_type: application/zip
+
       - name: Checkout (for push)
         uses: actions/checkout@v4
         with:
@@ -76,10 +109,12 @@ jobs:
             git branch -vv
             git status --porcelain=2 --branch || true
             ls -la artifacts/visual-tests/${{ github.run_id }} || true
-            exit 1
+            # do not fail workflow if branch push fails (release succeeded)
+            echo "Continuing without artifacts branch";
+          else
+            echo "Artifacts pushed to branch: $GITHUB_BRANCH"
+            git ls-tree -r --name-only HEAD | sed -n '1,200p'
           fi
-          echo "Artifacts pushed to branch: $GITHUB_BRANCH"
-          git ls-tree -r --name-only HEAD | sed -n '1,200p'
 
       - name: Zip visual test artifacts
         working-directory: ${{ github.workspace }}
