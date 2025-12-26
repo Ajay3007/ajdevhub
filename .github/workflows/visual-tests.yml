@@ -43,6 +43,60 @@ jobs:
         run: |
           node report-to-html.js || true
 
+      - name: Commit artifacts to branch
+        env:
+          GIT_AUTHOR_NAME: 'github-actions[bot]'
+          GIT_AUTHOR_EMAIL: '41898282+github-actions[bot]@users.noreply.github.com'
+          GITHUB_BRANCH: 'visual-tests-artifacts'
+        run: |
+          # ensure we can push
+          git config user.name "$GIT_AUTHOR_NAME"
+          git config user.email "$GIT_AUTHOR_EMAIL"
+          # create or update branch
+          git fetch origin $GITHUB_BRANCH || true
+          git checkout -B $GITHUB_BRANCH
+          # copy artifacts into a run-specific subfolder
+          mkdir -p artifacts/visual-tests/${{ github.run_id }}
+          cp -R tools/visual-tests/screenshots artifacts/visual-tests/${{ github.run_id }}/screenshots || true
+          cp -R tools/visual-tests/reports artifacts/visual-tests/${{ github.run_id }}/reports || true
+          cp tools/visual-tests/report-to-html.js artifacts/visual-tests/${{ github.run_id }}/ || true
+          git add artifacts/visual-tests/${{ github.run_id }} || true
+          git commit -m "ci(tests): add visual test artifacts from run ${{ github.run_id }}" || echo "No changes to commit"
+          git push origin $GITHUB_BRANCH --force
+
+      - name: Zip visual test artifacts
+        working-directory: ${{ github.workspace }}
+        run: |
+          apt-get update && apt-get install -y zip || true
+          zip -r visual-tests-${{ github.run_id }}-screenshots.zip tools/visual-tests/screenshots || true
+          zip -r visual-tests-${{ github.run_id }}-reports.zip tools/visual-tests/reports tools/visual-tests/reports/home.html || true
+
+      - name: Create GitHub release
+        id: create_release
+        uses: softprops/action-gh-release@v1
+        with:
+          name: "Visual Tests ${{ github.run_id }}"
+          tag_name: "visual-tests-${{ github.run_id }}"
+          body: "Visual test artifacts for run ${{ github.run_id }}"
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Upload screenshots to release
+        uses: actions/upload-release-asset@v1
+        with:
+          upload_url: ${{ steps.create_release.outputs.upload_url }}
+          asset_path: visual-tests-${{ github.run_id }}-screenshots.zip
+          asset_name: visual-tests-${{ github.run_id }}-screenshots.zip
+          asset_content_type: application/zip
+
+      - name: Upload reports to release
+        uses: actions/upload-release-asset@v1
+        with:
+          upload_url: ${{ steps.create_release.outputs.upload_url }}
+          asset_path: visual-tests-${{ github.run_id }}-reports.zip
+          asset_name: visual-tests-${{ github.run_id }}-reports.zip
+          asset_content_type: application/zip
+
       - name: Upload screenshots
         uses: actions/upload-artifact@v4
         with:
