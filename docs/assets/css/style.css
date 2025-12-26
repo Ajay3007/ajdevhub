@@ -68,16 +68,16 @@ h1,h2,h3{
 }
 
 .hero{
-  padding:3rem 0 2rem;
+/* Dark theme overrides */
+[data-theme="dark"]{
+  --bg:#071024;
+  --card:#0b1220;
+  --muted:#94a3b8;
+  --accent:#10B981;
+  --accent-2:#0EA5A4;
+  --text:#e6eef8;
 }
-
-.hero-title{
-  font-size:2.4rem;
-  margin:0;
-}
-
-.hero-sub{
-  color:var(--muted);
+.muted{color:var(--muted)}
   max-width:720px;
 }
 
