@@ -133,3 +133,38 @@ If you'd like the same content to remain visible under a raw README or alternate
 	</div>
 </div>
 {% endif %}
+
+---
+
+## 🚀 Latest Projects
+
+<div class="simple-list">
+	{% assign projects = site.data.projects | default: site.pages | where_exp:"p","p.url contains '/projects'" %}
+	{% if projects and projects.size > 0 %}
+		<ul>
+			{% for p in projects limit:6 %}
+				<li>
+					<a href="{{ p.url | relative_url }}">{{ p.title | default: p.name }}</a>
+					{% if p.excerpt %} - <span class="muted">{{ p.excerpt }}</span>{% endif %}
+				</li>
+			{% endfor %}
+		</ul>
+	{% else %}
+		<ul>
+			<li><a href="{{ site.baseurl }}/projects/">Car project</a> - <span class="muted">A simple OOP/system-design demo with source code.</span></li>
+		</ul>
+	{% endif %}
+</div>
+
+---
+
+## 📝 Latest Blog Posts
+
+<div class="simple-list">
+	<ul>
+		{% for post in site.posts limit:6 %}
+			<li>• <a href="{{ post.url | relative_url }}">{{ post.title }}</a> - <span class="muted">{{ post.date | date: "%b %-d, %Y" }}</span></li>
+		{% endfor %}
+	</ul>
+	<p><a href="{{ site.baseurl }}/blogs/">Read More Posts →</a></p>
+</div>

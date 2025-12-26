@@ -96,6 +96,14 @@ body{margin:0;font-family:Inter,Segoe UI,Roboto,Helvetica,Arial,sans-serif;backg
 .section-title{display:flex;align-items:center;justify-content:space-between;margin-bottom:0.75rem}
 .section-title h2{margin:0}
 
+/* Simple list used for posts and projects on homepage */
+.simple-list ul{list-style:none;padding:0;margin:0 0 0.75rem}
+.simple-list li{padding:.45rem 0;border-bottom:1px solid rgba(2,6,23,0.03);display:flex;gap:.6rem;align-items:center}
+.simple-list li a{font-weight:600;color:var(--text);text-decoration:none}
+.simple-list li a:hover{text-decoration:underline}
+.simple-list .muted{color:var(--muted);font-weight:400;margin-left:.4rem}
+.simple-list p{margin-top:.6rem}
+
 /* external link marker */
 a.external::after{content:' \2197';font-size:0.85em;margin-left:0.35rem;opacity:0.9}
 
