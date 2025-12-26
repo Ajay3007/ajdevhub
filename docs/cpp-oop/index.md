@@ -35,8 +35,8 @@ oops/
 ├── friend_function_vs_friend_class/ # Friend usage examples
 ├── operator_overloading/            # Operator <<, +, ==, etc.
 ├── .vscode/                         # Build tasks for VS Code
-├── cpp_oop_interview_checklist.pdf
-├── cpp_oop_interview_checklist_extended.pdf
+├── [cpp_oop_interview_checklist.pdf](https://raw.githubusercontent.com/Ajay3007/ajdevhub/master/src/oops/cpp_oop_interview_checklist.pdf)
+├── [cpp_oop_interview_checklist_extended.pdf](https://raw.githubusercontent.com/Ajay3007/ajdevhub/master/src/oops/cpp_oop_interview_checklist_extended.pdf)
 └── README.md
 ```
 
@@ -170,9 +170,9 @@ weak_ptr    ---> observer (non-owning reference)
 
 # 📄 Included PDF Checklists
 
-- cpp_oop_interview_checklist.pdf
+- [cpp_oop_interview_checklist.pdf](https://raw.githubusercontent.com/Ajay3007/ajdevhub/master/src/oops/cpp_oop_interview_checklist.pdf)
 
-- cpp_oop_interview_checklist_extended.pdf
+- [cpp_oop_interview_checklist_extended.pdf](https://raw.githubusercontent.com/Ajay3007/ajdevhub/master/src/oops/cpp_oop_interview_checklist_extended.pdf)
 
 ## These contain:
 

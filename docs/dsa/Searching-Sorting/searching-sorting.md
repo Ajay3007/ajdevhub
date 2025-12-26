@@ -115,9 +115,9 @@ public:
 };
 ```
 
-2. [Floor/Ceil of an Element in a Sorted Array - Approach](floorAndCeil.pdf)
+2. [Floor/Ceil of an Element in a Sorted Array - Approach](https://raw.githubusercontent.com/Ajay3007/ajdevhub/master/src/DSA/Searching-Sorting/floorAndCeil.pdf)
 
-3. [Leetcode 35. Search Insert Position](https://leetcode.com/problems/search-insert-position/description/) - **[My Approach](floorAndCeil.pdf)**
+3. [Leetcode 35. Search Insert Position](https://leetcode.com/problems/search-insert-position/description/) - **[My Approach](https://raw.githubusercontent.com/Ajay3007/ajdevhub/master/src/DSA/Searching-Sorting/floorAndCeil.pdf)**
 
 4. [Leetcode 744. Find Smallest Letter Greater Than Target](https://leetcode.com/problems/find-smallest-letter-greater-than-target/description/)
 

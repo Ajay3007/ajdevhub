@@ -216,7 +216,7 @@ Generate all substring and check for the longest substring without repeating cha
 
 **- Optimal Solution**
 
-**[Refer this pdf image for Explaination](leetcode424.pdf)**
+**[Refer this pdf image for Explaination](https://raw.githubusercontent.com/Ajay3007/ajdevhub/master/src/DSA/Arrays/SlidingWindow/leetcode424.pdf)**
 
 **[Solution Leetcode 3](Leetcode-3.cpp)**
 

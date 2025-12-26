@@ -26,7 +26,7 @@ Visit the site : [👉 HERE](https://ajay3007.github.io/ajdevhub/)
 
 ## [System Design](/docs/system-design/index.md)
 
-## [Recusrion](/src/recursion/recursion.md)
+## [Recusrion](docs/dsa/recursion/recursion.md)
 
 ---
 

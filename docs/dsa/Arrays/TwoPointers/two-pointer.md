@@ -161,7 +161,7 @@ while (i < n && j < m) {
 
 #### 1. [Leetcode 167. Two Sum II - Input Array Is Sorted](https://leetcode.com/problems/two-sum-ii-input-array-is-sorted/description/)
 
-- **For my Solution click [PDF Solution](leetcode-167.pdf)**
+- **For my Solution click [PDF Solution](https://raw.githubusercontent.com/Ajay3007/ajdevhub/master/src/DSA/Arrays/TwoPointers/leetcode-167.pdf)**
 
 #### 2. [Leetcode 15. 3Sum](https://leetcode.com/problems/3sum/description/)
 

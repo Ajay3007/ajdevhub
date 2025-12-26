@@ -17,4 +17,15 @@ document.addEventListener('DOMContentLoaded', function(){
       }
     })
   })
+
+  // Open external links in new tab and add noopener
+  document.querySelectorAll('a[href^="http"]').forEach(a=>{
+    try {
+      const url = new URL(a.href);
+      if (url.host !== location.host) {
+        a.setAttribute('target','_blank');
+        a.setAttribute('rel','noopener noreferrer');
+      }
+    } catch(e){ /* ignore invalid URLs */ }
+  })
 });
