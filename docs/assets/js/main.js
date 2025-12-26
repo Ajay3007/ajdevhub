@@ -84,13 +84,36 @@ document.addEventListener('DOMContentLoaded', function(){
 
   // Dropdown toggle on touch / small screens: prevent navigation and show submenu
   document.querySelectorAll('.drop-toggle').forEach(btn=>{
+    // Click (touch) handler: toggle menu on small screens and update ARIA attributes
     btn.addEventListener('click', e=>{
       const parent = btn.closest('.nav-item');
-      if(!parent) return;
+      const dropdown = parent && parent.querySelector('.nav-dropdown');
+      if(!parent || !dropdown) return;
       if(window.innerWidth <= 720){
         e.preventDefault();
-        parent.classList.toggle('open');
+        const isOpen = parent.classList.toggle('open');
+        btn.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+        dropdown.setAttribute('aria-hidden', isOpen ? 'false' : 'true');
+      }
+    })
+
+    // Keyboard support: Enter / Space should toggle on small screens too
+    btn.addEventListener('keydown', e=>{
+      if(e.key === 'Enter' || e.key === ' '){
+        e.preventDefault();
+        btn.click();
       }
     })
   })
+
+  // Ensure nav-toggle button updates aria-expanded when toggling the nav on mobile
+  const navToggleBtn = document.getElementById('nav-toggle');
+  const mainNav = document.getElementById('main-nav');
+  if(navToggleBtn && mainNav){
+    navToggleBtn.setAttribute('aria-expanded', 'false');
+    navToggleBtn.addEventListener('click', ()=>{
+      const open = mainNav.style.display === 'block';
+      navToggleBtn.setAttribute('aria-expanded', open ? 'false' : 'true');
+    })
+  }
 });

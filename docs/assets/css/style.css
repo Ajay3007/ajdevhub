@@ -24,7 +24,7 @@ body{margin:0;font-family:Inter,Segoe UI,Roboto,Helvetica,Arial,sans-serif;backg
 .nav-item{position:relative}
 .nav-item .drop-toggle{display:inline-flex;align-items:center;gap:.4rem}
 .nav-dropdown{position:absolute;top:calc(100% + 8px);left:0;padding:.75rem;border-radius:12px;background:var(--card);border:1px solid rgba(2,6,23,0.06);box-shadow:0 12px 40px rgba(2,6,23,0.06);min-width:420px;display:none}
-.nav-item:hover .nav-dropdown,.nav-item.open .nav-dropdown{display:block}
+.nav-item:hover .nav-dropdown,.nav-item.open .nav-dropdown,.nav-item:focus-within .nav-dropdown{display:block}
 .dropdown-grid{display:grid;grid-template-columns:repeat(2,minmax(180px,1fr));gap:.5rem}
 .nav-dropdown .nav-card{padding:.6rem;border-radius:10px;border:1px solid rgba(2,6,23,0.04);box-shadow:none;background:transparent}
 .nav-dropdown .nav-card h4{margin:0 0 .25rem;font-size:0.95rem}
@@ -37,6 +37,9 @@ body{margin:0;font-family:Inter,Segoe UI,Roboto,Helvetica,Arial,sans-serif;backg
   .nav-dropdown{position:static;min-width:auto;margin-top:.5rem}
   .dropdown-grid{grid-template-columns:repeat(auto-fit,minmax(140px,1fr))}
 }
+
+/* Visible focus outline for keyboard users */
+.drop-toggle:focus{outline:2px solid var(--accent);outline-offset:3px;border-radius:6px}
 .nav-toggle{display:none;background:none;border:0;color:var(--text);font-size:1.25rem}
 .hero{padding:3rem 0;background:linear-gradient(180deg,rgba(12,16,24,0.4),transparent)}
 .hero-title{font-size:2.25rem;margin:0 0 .5rem}
