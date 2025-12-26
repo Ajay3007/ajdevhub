@@ -10,23 +10,13 @@ Visit the site : [👉 HERE](https://ajay3007.github.io/ajdevhub/)
 
 ## [Getting Started](/docs/index.md)
 
-## [Data Structures & Algorithms (DSA)](/docs/dsa/index.md)
+## [Learning](/docs/learning/index.md)
 
-## [C++ Concepts](/docs/cpp-concepts/index.md)
+## [Projects](/docs/projects/index.md)
 
-## [OOP](/docs/cpp-oop/index.md)
+## [Blogs](/docs/blogs/index.md)
 
-## [Networking](/docs/networking/index.md)
-
-## [DPDK](/docs/dpdk/index.md)
-
-## [VPP](/docs/vpp/index.md)
-
-## [Operating Systems](/docs/os/index.md)
-
-## [System Design](/docs/system-design/index.md)
-
-## [Recusrion](docs/dsa/recursion/recursion.md)
+## [About](/docs/about.md)
 
 ---
 
