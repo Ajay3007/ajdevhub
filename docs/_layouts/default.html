@@ -17,14 +17,59 @@
         <a class="brand" href="{{ site.baseurl | default: '/' }}">{{ site.title }}</a>
         <nav class="main-nav" id="main-nav">
           <a href="{{ site.baseurl }}/">Home</a>
-          <a href="{{ site.baseurl }}/cpp-oop/">C++ / OOP</a>
-          <a href="{{ site.baseurl }}/networking/">Networking</a>
-          <a href="{{ site.baseurl }}/dpdk/">DPDK</a>
-          <a href="{{ site.baseurl }}/dsa/">DSA</a>
-          <a href="{{ site.baseurl }}/vpp/">VPP</a>
-          <a href="{{ site.baseurl }}/os/">OS</a>
-          <a href="{{ site.baseurl }}/system-design/">System Design</a>
+
+          <div class="nav-item has-dropdown">
+            <a href="{{ site.baseurl }}/learning/" class="drop-toggle">Learning ▾</a>
+            <div class="nav-dropdown" aria-hidden="true">
+              <div class="dropdown-grid">
+                <a class="nav-card" href="{{ site.baseurl }}/cpp-oop/" data-icon="cpp">
+                  <div class="icon">💠</div>
+                  <h4>C++ / OOP</h4>
+                  <p class="muted">Modern C++ idioms & patterns</p>
+                </a>
+
+                <a class="nav-card" href="{{ site.baseurl }}/dsa/" data-icon="dsa">
+                  <div class="icon">🧠</div>
+                  <h4>DSA</h4>
+                  <p class="muted">Data structures & problem patterns</p>
+                </a>
+
+                <a class="nav-card" href="{{ site.baseurl }}/networking/" data-icon="network">
+                  <div class="icon">🌐</div>
+                  <h4>Networking</h4>
+                  <p class="muted">Routing, packets & tools</p>
+                </a>
+
+                <a class="nav-card" href="{{ site.baseurl }}/dpdk/" data-icon="dpdk">
+                  <div class="icon">⚡</div>
+                  <h4>DPDK</h4>
+                  <p class="muted">Fast packet I/O</p>
+                </a>
+
+                <a class="nav-card" href="{{ site.baseurl }}/vpp/" data-icon="vpp">
+                  <div class="icon">🚀</div>
+                  <h4>VPP</h4>
+                  <p class="muted">Forwarding & plugins</p>
+                </a>
+
+                <a class="nav-card" href="{{ site.baseurl }}/os/" data-icon="os">
+                  <div class="icon">🧭</div>
+                  <h4>OS</h4>
+                  <p class="muted">Processes, memory & threads</p>
+                </a>
+
+                <a class="nav-card" href="{{ site.baseurl }}/system-design/" data-icon="system">
+                  <div class="icon">🧩</div>
+                  <h4>System Design</h4>
+                  <p class="muted">High-level architectures</p>
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <a href="{{ site.baseurl }}/projects/">Projects</a>
           <a href="{{ site.baseurl }}/blogs/">Blogs</a>
+          <a href="{{ site.baseurl }}/about/">About</a>
         </nav>
         <div style="display:flex;gap:.5rem;align-items:center">
           <button id="theme-toggle" class="theme-toggle" aria-label="Toggle theme">🌗 <span class="sr-only">Toggle theme</span></button>
