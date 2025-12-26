@@ -86,39 +86,32 @@ Find me on GitHub: [Ajay3007](https://github.com/Ajay3007)
 
 ---
 
-## Featured sections
+## Explore
 
-<div id="learn" class="card-grid">
-	<div class="card">
-		<h3>C++ / OOP</h3>
-		<p class="muted">Notes and example projects on object-oriented design and C++ idioms.</p>
-		<p><a href="{{ site.baseurl }}/cpp-oop/">Open →</a></p>
-	</div>
-	<div class="card">
-		<h3>Networking</h3>
-		<p class="muted">OSI model, DHCP, routing and practical networking notes.</p>
-		<p><a href="{{ site.baseurl }}/networking/">Open →</a></p>
-	</div>
-	<div class="card">
-		<h3>DPDK & VPP</h3>
-		<p class="muted">DPDK mbufs, flows, and VPP nodes/plugins examples.</p>
-		<p><a href="{{ site.baseurl }}/dpdk/">DPDK →</a> &nbsp; <a href="{{ site.baseurl }}/vpp/">VPP →</a></p>
-	</div>
-	<div class="card">
-		<h3>Operating Systems</h3>
-		<p class="muted">Processes, memory, threads and OS internals.</p>
-		<p><a href="{{ site.baseurl }}/os/">Open →</a></p>
-	</div>
-	<div class="card">
-		<h3>System Design</h3>
-		<p class="muted">Load balancing, caching, databases and microservices notes.</p>
-		<p><a href="{{ site.baseurl }}/system-design/">Open →</a></p>
-	</div>
-	<div class="card">
-		<h3>Blog</h3>
-		<p class="muted">Articles, tutorials and short posts. New posts will appear here.</p>
-		<p><a href="{{ site.baseurl }}/blogs/">Read posts →</a></p>
-	</div>
+<div class="card-grid">
+  <div class="card">
+    <h3>Learning</h3>
+    <p class="muted">Core topics I study: C++/OOP, DSA, Networking, DPDK, VPP, OS and System Design.</p>
+    <p><a href="{{ site.baseurl }}/learning/">Open →</a></p>
+  </div>
+
+  <div class="card">
+    <h3>Projects</h3>
+    <p class="muted">Select projects and example code from my experiments and demos.</p>
+    <p><a href="{{ site.baseurl }}/projects/">Open →</a></p>
+  </div>
+
+  <div class="card">
+    <h3>Blogs</h3>
+    <p class="muted">Short posts, tutorials and notes from my learning journey.</p>
+    <p><a href="{{ site.baseurl }}/blogs/">Read posts →</a></p>
+  </div>
+
+  <div class="card">
+    <h3>About</h3>
+    <p class="muted">A short bio and contact information.</p>
+    <p><a href="{{ site.baseurl }}/about/">About →</a></p>
+  </div>
 </div>
 
 ---
