@@ -62,15 +62,24 @@ document.addEventListener('DOMContentLoaded', function(){
     localStorage.setItem('ajdevhub-theme', next);
   })
 
-  // Replace nav card emoji icons with inline SVGs for crisp UI (if any nav cards use img with data-icon attr)
+  // Replace nav card emoji icons with inline SVGs for crisp UI (if any nav cards use img with data-icon attr).
+  // Use the base path exposed by Jekyll in window._SITE_BASE so this JS file doesn't need Liquid templating.
+  const ICON_BASE = (window._SITE_BASE || '') + '/assets/icons/';
   document.querySelectorAll('.nav-card[data-icon]').forEach(card=>{
     const name = card.getAttribute('data-icon');
-    const img = document.createElement('img');
-    img.src = (new URL(`{{ '/assets/icons/' | relative_url }}${name}.svg`, location.href)).href;
-    img.className = 'icon';
-    img.alt = name;
-    const first = card.querySelector('.icon');
-    if(first) first.replaceWith(img); else card.insertBefore(img, card.firstChild);
+    const url = (new URL(`${ICON_BASE}${name}.svg`, location.href)).href;
+    const existing = card.querySelector('img.icon');
+    if(existing){
+      // Ensure any existing img has a correct src (fixes cases where Liquid was left raw)
+      existing.src = url;
+      existing.alt = name;
+    } else {
+      const img = document.createElement('img');
+      img.src = url;
+      img.className = 'icon';
+      img.alt = name;
+      card.insertBefore(img, card.firstChild);
+    }
   })
 
   // Dropdown toggle on touch / small screens: prevent navigation and show submenu
