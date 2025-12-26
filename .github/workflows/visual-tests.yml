@@ -1,162 +1,41 @@
 name: Visual & Accessibility Tests
 
 on:
-  workflow_dispatch: {}
-  push:
-    branches: [ master ]
+  pull_request:
+    branches: [ main ]
 
 jobs:
   visual-tests:
     runs-on: ubuntu-latest
-    name: Run Playwright screenshots and axe audits
-    steps:
-      - name: Checkout repository
-        uses: actions/checkout@v4
 
-      - name: Setup Node.js
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Setup Node
         uses: actions/setup-node@v4
         with:
-          node-version: '18'
+          node-version: 20
 
       - name: Install dependencies
-        working-directory: tools/visual-tests
         run: |
-          npm install
+          cd tools/visual-tests
+          npm ci
 
-      - name: Install Playwright browsers
-        working-directory: tools/visual-tests
+      - name: Run visual tests
         run: |
-          npx playwright install chromium
-
-      - name: Run screenshots
-        working-directory: tools/visual-tests
-        run: |
-          npm run screenshot
-
-      - name: Run accessibility audit
-        working-directory: tools/visual-tests
-        run: |
-          npm run a11y
-
-      - name: Convert axe JSON to HTML
-        working-directory: tools/visual-tests
-        run: |
-          node report-to-html.js || true
-
-      - name: Zip visual test artifacts
-        working-directory: ${{ github.workspace }}
-        run: |
-          apt-get update && apt-get install -y zip || true
-          zip -r visual-tests-${{ github.run_id }}-screenshots.zip tools/visual-tests/screenshots || true
-          zip -r visual-tests-${{ github.run_id }}-reports.zip tools/visual-tests/reports tools/visual-tests/reports/home.html || true
-
-      - name: Create GitHub release
-        id: create_release
-        uses: softprops/action-gh-release@v1
-        with:
-          name: "Visual Tests ${{ github.run_id }}"
-          tag_name: "visual-tests-${{ github.run_id }}"
-          body: "Visual test artifacts for run ${{ github.run_id }}"
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-
-      - name: Upload screenshots to release
-        uses: actions/upload-release-asset@v1
-        with:
-          upload_url: ${{ steps.create_release.outputs.upload_url }}
-          asset_path: visual-tests-${{ github.run_id }}-screenshots.zip
-          asset_name: visual-tests-${{ github.run_id }}-screenshots.zip
-          asset_content_type: application/zip
-
-      - name: Upload reports to release
-        uses: actions/upload-release-asset@v1
-        with:
-          upload_url: ${{ steps.create_release.outputs.upload_url }}
-          asset_path: visual-tests-${{ github.run_id }}-reports.zip
-          asset_name: visual-tests-${{ github.run_id }}-reports.zip
-          asset_content_type: application/zip
-
-      - name: Checkout (for push)
-        uses: actions/checkout@v4
-        with:
-          fetch-depth: 0
-          persist-credentials: true
-
-      - name: Commit artifacts to branch
-        env:
-          GIT_AUTHOR_NAME: 'github-actions[bot]'
-          GIT_AUTHOR_EMAIL: '41898282+github-actions[bot]@users.noreply.github.com'
-          GITHUB_BRANCH: 'visual-tests-artifacts'
-        run: |
-          set -eux
-          git config user.name "$GIT_AUTHOR_NAME"
-          git config user.email "$GIT_AUTHOR_EMAIL"
-          # ensure authenticated remote (use GITHUB_TOKEN)
-          git remote set-url origin "https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}.git"
-          git fetch origin $GITHUB_BRANCH || true
-          git checkout -B $GITHUB_BRANCH
-          # prepare directory for this run
-          rm -rf artifacts/visual-tests/${{ github.run_id }} || true
-          mkdir -p artifacts/visual-tests/${{ github.run_id }}
-          cp -R tools/visual-tests/screenshots artifacts/visual-tests/${{ github.run_id }}/screenshots || true
-          cp -R tools/visual-tests/reports artifacts/visual-tests/${{ github.run_id }}/reports || true
-          cp tools/visual-tests/report-to-html.js artifacts/visual-tests/${{ github.run_id }}/ || true
-          git add artifacts/visual-tests/${{ github.run_id }} || true
-          git commit -m "ci(tests): add visual test artifacts from run ${{ github.run_id }}" || echo "No changes to commit"
-          if ! git push origin HEAD:$GITHUB_BRANCH --force; then
-            echo "GIT PUSH FAILED with exit code $?"
-            git remote -v
-            git branch -vv
-            git status --porcelain=2 --branch || true
-            ls -la artifacts/visual-tests/${{ github.run_id }} || true
-            # do not fail workflow if branch push fails (release succeeded)
-            echo "Continuing without artifacts branch";
-          else
-            echo "Artifacts pushed to branch: $GITHUB_BRANCH"
-            git ls-tree -r --name-only HEAD | sed -n '1,200p'
-          fi
-
-      - name: Zip visual test artifacts
-        working-directory: ${{ github.workspace }}
-        run: |
-          apt-get update && apt-get install -y zip || true
-          zip -r visual-tests-${{ github.run_id }}-screenshots.zip tools/visual-tests/screenshots || true
-          zip -r visual-tests-${{ github.run_id }}-reports.zip tools/visual-tests/reports tools/visual-tests/reports/home.html || true
-
-      - name: Create GitHub release
-        id: create_release
-        uses: softprops/action-gh-release@v1
-        with:
-          name: "Visual Tests ${{ github.run_id }}"
-          tag_name: "visual-tests-${{ github.run_id }}"
-          body: "Visual test artifacts for run ${{ github.run_id }}"
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-
-      - name: Upload screenshots to release
-        uses: actions/upload-release-asset@v1
-        with:
-          upload_url: ${{ steps.create_release.outputs.upload_url }}
-          asset_path: visual-tests-${{ github.run_id }}-screenshots.zip
-          asset_name: visual-tests-${{ github.run_id }}-screenshots.zip
-          asset_content_type: application/zip
-
-      - name: Upload reports to release
-        uses: actions/upload-release-asset@v1
-        with:
-          upload_url: ${{ steps.create_release.outputs.upload_url }}
-          asset_path: visual-tests-${{ github.run_id }}-reports.zip
-          asset_name: visual-tests-${{ github.run_id }}-reports.zip
-          asset_content_type: application/zip
+          cd tools/visual-tests
+          npm test
 
       - name: Upload screenshots
+        if: always()
         uses: actions/upload-artifact@v4
         with:
           name: visual-screenshots
           path: tools/visual-tests/screenshots/
 
-      - name: Upload axe reports
+      - name: Upload reports
+        if: always()
         uses: actions/upload-artifact@v4
         with:
-          name: axe-reports
+          name: visual-reports
           path: tools/visual-tests/reports/
