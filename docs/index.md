@@ -71,8 +71,29 @@ Find me on GitHub: [Ajay3007](https://github.com/Ajay3007)
 		<p class="muted">Load balancing, caching, databases and microservices notes.</p>
 		<p><a href="{{ site.baseurl }}/system-design/">Open →</a></p>
 	</div>
+	<div class="card">
+		<h3>Blog</h3>
+		<p class="muted">Articles, tutorials and short posts. New posts will appear here.</p>
+		<p><a href="{{ site.baseurl }}/blogs/">Read posts →</a></p>
+	</div>
 </div>
 
 ---
 
 If you'd like the same content to remain visible under a raw README or alternate index, tell me and I can add a small toggle to show the plain-markdown view.
+
+---
+
+## Latest post
+
+{% assign latest = site.posts | first %}
+{% if latest %}
+<div class="card-grid">
+	<div class="card">
+		<h3><a href="{{ latest.url | relative_url }}">{{ latest.title }}</a></h3>
+		<p class="muted">{{ latest.excerpt | strip_html | truncate:120 }}</p>
+		<p class="muted">{{ latest.date | date: "%b %-d, %Y" }}</p>
+		<p><a href="{{ latest.url | relative_url }}" class="btn ghost">Read →</a></p>
+	</div>
+</div>
+{% endif %}

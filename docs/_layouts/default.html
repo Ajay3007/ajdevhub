@@ -5,6 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>{{ page.title | default: site.title }}</title>
     <meta name="description" content="{{ page.description | default: site.description }}">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=Poppins:wght@600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}">
     <script defer src="{{ '/assets/js/main.js' | relative_url }}"></script>
   </head>
@@ -21,6 +24,7 @@
           <a href="{{ site.baseurl }}/vpp/">VPP</a>
           <a href="{{ site.baseurl }}/os/">OS</a>
           <a href="{{ site.baseurl }}/system-design/">System Design</a>
+          <a href="{{ site.baseurl }}/blogs/">Blogs</a>
         </nav>
         <button class="nav-toggle" id="nav-toggle" aria-label="Toggle menu">☰</button>
       </div>

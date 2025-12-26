@@ -34,3 +34,20 @@ Note: I moved DSA notes into `docs/dsa/` so they render on the GitHub Pages site
 
 Automation: A GitHub Action (`.github/workflows/sync-src-docs.yml`) now runs on pushes to `master` and will mirror markdown and PDFs from `src/` into `docs/` (into `docs/src/` and `docs/assets/pdfs/`) so the site always serves referenced assets.
 
+## Blog posts
+
+Add blog posts to the site by creating files under `docs/_posts/` named `YYYY-MM-DD-your-title.md` with YAML front matter, for example:
+
+```yaml
+---
+title: "My new post"
+date: 2025-12-31 10:00:00 +0000
+layout: default
+excerpt: "Short summary that appears on the blog index."
+---
+
+Post content here.
+```
+
+Posts will appear at `{{ site.baseurl }}/YYYY/MM/DD/your-title.html` and will be listed on `{{ site.baseurl }}/blogs/`.
+
