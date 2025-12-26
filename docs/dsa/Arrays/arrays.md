@@ -1,4 +1,4 @@
-﻿# 🚀 Arrays Mastery Guide
+﻿# <img src="{{ '/assets/icons/rocket.svg' | relative_url }}" class="inline-icon" alt="">Arrays Mastery Guide
 {% include dsa-sidebar.html %}
 
 ## ⭐ 1. Array Concepts You Must Master

@@ -173,7 +173,7 @@ ttl = 63
 ```
 This packet is now sent toward the next-hop (10.61.8.120). This is standard router behavior.
 
-## 🧠 8. Why This Is L3 Forwarding?
+## <img src="{{ '/assets/icons/brain.svg' | relative_url }}" class="inline-icon" alt="">8. Why This Is L3 Forwarding?
 
 Because VPP:
 

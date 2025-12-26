@@ -91,3 +91,6 @@ a.external::after{content:' \2197';font-size:0.85em;margin-left:0.35rem;opacity:
 @media (min-width:992px){
   .dsa-layout{display:grid;grid-template-columns:220px 1fr;gap:1.5rem}
 }
+
+/* Inline heading icon */
+.inline-icon{width:1.05em;height:1.05em;vertical-align:-0.15em;margin-right:0.4rem}

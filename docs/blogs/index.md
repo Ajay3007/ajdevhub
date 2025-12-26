@@ -13,7 +13,7 @@ Welcome to the blog — short posts, tutorials and notes.
   </div>
 
   <div class="blog-list">
-    {% for post in site.posts %}
+    {% for post in paginator.posts %}
     <article class="post-card">
       {% if post.image %}
       <figure style="margin:0 0.6rem 0 0;flex:0 0 220px;">
@@ -29,4 +29,23 @@ Welcome to the blog — short posts, tutorials and notes.
     </article>
     {% endfor %}
   </div>
+
+  <!-- Pagination -->
+  <nav class="section" aria-label="Blog pagination" style="margin-top:1.25rem">
+    <div style="display:flex;gap:.5rem;align-items:center;">
+      {% if paginator.previous_page %}
+        {% if paginator.previous_page == 1 %}
+          <a class="btn" href="{{ '/blogs/' | relative_url }}">← Newer</a>
+        {% else %}
+          <a class="btn" href="{{ '/blogs/page' | append: paginator.previous_page | append: '/' | relative_url }}">← Newer</a>
+        {% endif %}
+      {% endif %}
+
+      <span style="color:var(--muted)">Page {{ paginator.page }} of {{ paginator.total_pages }}</span>
+
+      {% if paginator.next_page %}
+        <a class="btn" href="{{ '/blogs/page' | append: paginator.next_page | append: '/' | relative_url }}">Older →</a>
+      {% endif %}
+    </div>
+  </nav>
 </section>

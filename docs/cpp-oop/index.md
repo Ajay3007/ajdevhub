@@ -79,7 +79,7 @@ oops/
 
 - When to use weak_ptr
 
-# 🧩 UML Diagrams (ASCII)
+# <img src="{{ '/assets/icons/puzzle.svg' | relative_url }}" class="inline-icon" alt="">UML Diagrams (ASCII)
 ## Friend Function vs Friend Class
 
 ```UML

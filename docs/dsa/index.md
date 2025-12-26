@@ -1,4 +1,4 @@
-﻿# 🚀 Data Structures & Algorithms (DSA) — Learning Hub
+﻿# <img src="{{ '/assets/icons/rocket.svg' | relative_url }}" class="inline-icon" alt="">Data Structures & Algorithms (DSA) — Learning Hub
 
 {% include dsa-sidebar.html %}
 
