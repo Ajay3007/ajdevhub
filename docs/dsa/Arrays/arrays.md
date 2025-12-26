@@ -1,10 +1,10 @@
-﻿```markdown
+ï»¿```markdown
 // copied from src/DSA/Arrays/arrays.md
-# ðŸš€ Arrays Mastery Guide
+# Ã°Å¸Å¡â‚¬ Arrays Mastery Guide
 {% include dsa-sidebar.html %}
 
-## â­ 1. Array Concepts You Must Master
-### ðŸ”¹ Basic Operations
+## Ã¢Â­Â 1. Array Concepts You Must Master
+### Ã°Å¸â€Â¹ Basic Operations
 
 - Traversal
 
@@ -18,7 +18,7 @@
 
 - Using hash maps to optimize
 
-### ðŸ”¹ Core Patterns
+### Ã°Å¸â€Â¹ Core Patterns
 
 **Arrays revolve around 10 major patterns:**
 
@@ -32,7 +32,7 @@
 
 **5. Binary Search on Answer**
 
-**6. Kadaneâ€™s Algorithm**
+**6. KadaneÃ¢â‚¬â„¢s Algorithm**
 
 **7. Sorting + Greedy**
 
@@ -44,7 +44,7 @@
 
 We will cover each with template + example.
 
-## â­ Must-Do Array Problems - Practice
+## Ã¢Â­Â Must-Do Array Problems - Practice
 
 #### 1. [Leetcode 1. Two Sum](https://leetcode.com/problems/two-sum/description/)
 
@@ -69,13 +69,13 @@ We will cover each with template + example.
 #### 11. [Leetcode 41. First Missing Positive](https://leetcode.com/problems/first-missing-positive/description/)
 
 
-## â­ Pattern â†’ Template â†’ Example
+## Ã¢Â­Â Pattern Ã¢â€ â€™ Template Ã¢â€ â€™ Example
 
-### ðŸ”¶ [Pattern 1: Sliding Window](SlidingWindow/sliding-window.md)
+### Ã°Å¸â€Â¶ [Pattern 1: Sliding Window](SlidingWindow/sliding-window.md)
 
 Sliding Window is used when we deal with **contiguous subarrays or substrings**.
 
-#### ðŸ“Œ Template (Variable-size window)
+#### Ã°Å¸â€œÅ’ Template (Variable-size window)
 
 ```cpp
 int left = 0;
@@ -91,16 +91,16 @@ for (int right = 0; right < n; right++) {
 }
 ```
 
-#### ðŸ“˜ Example
+#### Ã°Å¸â€œËœ Example
 
 1. [Longest substring without repeating characters](https://leetcode.com/problems/longest-substring-without-repeating-characters/description/)
 
 
-### ðŸ”¶ [Pattern 2: Two Pointers](TwoPointers/two-pointer.md)
+### Ã°Å¸â€Â¶ [Pattern 2: Two Pointers](TwoPointers/two-pointer.md)
 
 Used when array is sorted, or when you're searching for pairs.
 
-#### ðŸ“Œ Template
+#### Ã°Å¸â€œÅ’ Template
 
 ```cpp
 int left = 0, right = n - 1;
@@ -113,7 +113,7 @@ while (left < right) {
 }
 ```
 
-#### ðŸ“˜ Example
+#### Ã°Å¸â€œËœ Example
 
 Two Sum (sorted)
 
@@ -121,11 +121,11 @@ Two Sum (sorted)
 
 Container With Most Water
 
-### ðŸ”¶ Pattern 3: Prefix Sum
+### Ã°Å¸â€Â¶ Pattern 3: Prefix Sum
 
 Instant sum queries from index `l` to `r`.
 
-#### ðŸ“Œ Template
+#### Ã°Å¸â€œÅ’ Template
 
 ```cpp
 vector<int> pref(n+1, 0);
@@ -135,17 +135,17 @@ for (int i = 0; i < n; i++) pref[i+1] = pref[i] + arr[i];
 int sum = pref[r+1] - pref[l];
 ```
 
-#### ðŸ“˜ Example
+#### Ã°Å¸â€œËœ Example
 
 Subarray sum equals K
 
 Range sum queries
 
-### ðŸ”¶ Pattern 4: Kadaneâ€™s Algorithm
+### Ã°Å¸â€Â¶ Pattern 4: KadaneÃ¢â‚¬â„¢s Algorithm
 
 Max subarray sum in O(n).
 
-#### ðŸ“Œ Template
+#### Ã°Å¸â€œÅ’ Template
 
 ```cpp
 int max_ending_here = 0, best = INT_MIN;
@@ -156,7 +156,7 @@ for (int x : arr) {
 }
 ```
 
-### ðŸ”¶ Pattern 5: Sorting + Greedy
+### Ã°Å¸â€Â¶ Pattern 5: Sorting + Greedy
 
 Used in:
 
@@ -166,11 +166,11 @@ Task scheduling
 
 Minimum arrows to burst balloons
 
-### ðŸ”¶ Pattern 6: Binary Search
+### Ã°Å¸â€Â¶ Pattern 6: Binary Search
 
 Used on sorted arrays.
 
-#### ðŸ“Œ Standard Template
+#### Ã°Å¸â€œÅ’ Standard Template
 
 ```cpp
 int l = 0, r = n - 1;
@@ -182,7 +182,7 @@ while (l <= r) {
 }
 ```
 
-### ðŸ”¶ Pattern 7: Binary Search on Answer
+### Ã°Å¸â€Â¶ Pattern 7: Binary Search on Answer
 
 Used when the array is not sorted but the answer lies in a monotonic search space.
 #### Examples:
@@ -193,7 +193,7 @@ Minimum pages allocation
 
 Aggressive cows
 
-### ðŸ”¶ Pattern 8: Intervals (Important!)
+### Ã°Å¸â€Â¶ Pattern 8: Intervals (Important!)
 
 Many array problems are actually interval problems.
 
@@ -203,7 +203,7 @@ Many array problems are actually interval problems.
 
 2. Merge or process based on end
 
-### ðŸ”¶ Pattern 9: Matrix as Array of Arrays
+### Ã°Å¸â€Â¶ Pattern 9: Matrix as Array of Arrays
 
 2D array concepts:
 
@@ -215,7 +215,7 @@ Many array problems are actually interval problems.
 
 - Simulation problems
 
-### ðŸ”¶ Pattern 10: Hashmap + Array Combo
+### Ã°Å¸â€Â¶ Pattern 10: Hashmap + Array Combo
 
 Most-used pattern in arrays.
 

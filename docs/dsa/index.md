@@ -1,14 +1,14 @@
-﻿# ðŸš€ Data Structures & Algorithms (DSA) â€” Learning Hub
+ï»¿# Ã°Å¸Å¡â‚¬ Data Structures & Algorithms (DSA) Ã¢â‚¬â€ Learning Hub
 
 {% include dsa-sidebar.html %}
 
-Welcome to my **DSA Learning Hub**, a continuously growing collection of notes, explanations, UML diagrams, code snippets, and runnable examples that Iâ€™m building while mastering Computer Science fundamentals in **C++**.
+Welcome to my **DSA Learning Hub**, a continuously growing collection of notes, explanations, UML diagrams, code snippets, and runnable examples that IÃ¢â‚¬â„¢m building while mastering Computer Science fundamentals in **C++**.
 
 This section is part of my broader learning journey across Systems, Networking, and Backend Engineering.
 
 ---
 
-## ðŸ“˜ What This Section Contains
+## Ã°Å¸â€œËœ What This Section Contains
 
 - Clear explanations of fundamental & advanced data structures  
 - C++ implementations (iterative + recursive)  
@@ -20,9 +20,9 @@ This section is part of my broader learning journey across Systems, Networking, 
 
 ---
 
-# â­ 1. The DSA Structure
+# Ã¢Â­Â 1. The DSA Structure
 
-## ðŸ“Œ A. Core Data Structures
+## Ã°Å¸â€œÅ’ A. Core Data Structures
 
 - [Arrays](Arrays/arrays.md)
 
@@ -46,7 +46,7 @@ This section is part of my broader learning journey across Systems, Networking, 
 
 - [Bit manipulation]
 
-## ðŸ“Œ B. Algorithms
+## Ã°Å¸â€œÅ’ B. Algorithms
 
 - [Searching & Sorting (binary search patterns, custom comparator, stable sort, counting sort)](Searching-Sorting/searching-sorting.md)
 
@@ -69,35 +69,35 @@ This section is part of my broader learning journey across Systems, Networking, 
 - [Union-Find]
 
 
-# ðŸ“š Table of Contents
+# Ã°Å¸â€œÅ¡ Table of Contents
 
-## 1ï¸âƒ£ **Basics**
+## 1Ã¯Â¸ÂÃ¢Æ’Â£ **Basics**
 - [Recursion Deep Dive](recursion/recursion.md)
 - [Memory Layout & Stack vs Heap]
 
 ---
 
-## 2ï¸âƒ£ **Core Data Structures**
+## 2Ã¯Â¸ÂÃ¢Æ’Â£ **Core Data Structures**
 
-### ðŸ”¹ Linear Data Structures
+### Ã°Å¸â€Â¹ Linear Data Structures
 - [Arrays](Arrays/arrays.md)
 - [Linked Lists](LinkedList/linked-list.md)
 - [Stacks]
 - [Queues]
 
-### ðŸ”¹ Hashing & Maps
+### Ã°Å¸â€Â¹ Hashing & Maps
 - [Hash Tables]
 - [Collision Handling]
 - [C++ `unordered_map` Internals]
 
-### ðŸ”¹ Trees
+### Ã°Å¸â€Â¹ Trees
 - [Binary Trees]
 - [Binary Search Trees]
 - [AVL Tree]
 - [Trie]
 - [Heap / Priority Queue]
 
-### ðŸ”¹ Graphs
+### Ã°Å¸â€Â¹ Graphs
 - [Graph Representations]
 - [BFS / DFS]
 - [Topological Sort]
@@ -106,29 +106,29 @@ This section is part of my broader learning journey across Systems, Networking, 
 
 ---
 
-## 3ï¸âƒ£ **Algorithms**
+## 3Ã¯Â¸ÂÃ¢Æ’Â£ **Algorithms**
 
-### ðŸ”¹ Searching
+### Ã°Å¸â€Â¹ Searching
 - [Binary Search + Variants](Searching-Sorting/searching-sorting.md)
 
-### ðŸ”¹ Sorting
+### Ã°Å¸â€Â¹ Sorting
 - [Searching & Sorting Techniques](Searching-Sorting/sorting.md)
 
-### ðŸ”¹ Dynamic Programming
+### Ã°Å¸â€Â¹ Dynamic Programming
 - [DP Basics]
 - [1D DP Patterns]
 - [2D Grid DP]
 - [Knapsack Family]
 - [LCS / LIS / Edit Distance]
 
-### ðŸ”¹ Greedy Algorithms
+### Ã°Å¸â€Â¹ Greedy Algorithms
 - [Greedy Strategy Basics]
 - [Intervals Problems]
 - [Huffman Coding]
 
 ---
 
-# ðŸ§© C++ Code Standards for DSA
+# Ã°Å¸Â§Â© C++ Code Standards for DSA
 
 To maintain consistency across all DSA notes, all C++ code follows:
 
