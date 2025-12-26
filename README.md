@@ -32,3 +32,5 @@ Visit the site : [👉 HERE](https://ajay3007.github.io/ajdevhub/)
 
 Note: I moved DSA notes into `docs/dsa/` so they render on the GitHub Pages site and fixed internal links. If you make edits under `src/DSA/` in the future, consider syncing them into `docs/dsa/` to keep the site up-to-date.
 
+Automation: A GitHub Action (`.github/workflows/sync-src-docs.yml`) now runs on pushes to `master` and will mirror markdown and PDFs from `src/` into `docs/` (into `docs/src/` and `docs/assets/pdfs/`) so the site always serves referenced assets.
+
