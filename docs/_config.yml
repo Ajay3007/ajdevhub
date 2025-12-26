@@ -8,3 +8,5 @@ theme: minima
 plugins:
   - jekyll-feed
 markdown: kramdown
+github_username: Ajay3007
+github_repo: Ajay3007/ajdevhub
