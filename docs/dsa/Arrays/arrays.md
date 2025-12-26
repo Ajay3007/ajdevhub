@@ -1,6 +1,4 @@
-﻿?```markdown
-// copied from src/DSA/Arrays/arrays.md
-# 🚀 Arrays Mastery Guide
+﻿# 🚀 Arrays Mastery Guide
 {% include dsa-sidebar.html %}
 
 ## ⭐ 1. Array Concepts You Must Master
