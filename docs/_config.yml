@@ -1,15 +1,18 @@
-# Jekyll configuration
-
 title: Ajay's Dev Hub
-description: "Learning notes and tutorials on C++, DPDK, VPP, Networking, OS, System Design"
-baseurl: "/ajdevhub" # <- set to "/" if you rename repo to ajay3007.github.io for personal site
+description: Systems, Networking, DPDK, VPP, OS & System Design learning hub
 url: "https://ajay3007.github.io"
-theme: minima
+baseurl: "/ajdevhub"
+
+markdown: kramdown
+theme: null
+
 plugins:
   - jekyll-feed
-  - jekyll-paginate
-paginate: 5
-paginate_path: "/blogs/page:num/"
-markdown: kramdown
-github_username: Ajay3007
-github_repo: Ajay3007/ajdevhub
+  - jekyll-seo-tag
+
+exclude:
+  - ../src
+  - node_modules
+  - tools
+  - README.md
+  - _site
