@@ -25,6 +25,8 @@ document.addEventListener('DOMContentLoaded', function(){
       if (url.host !== location.host) {
         a.setAttribute('target','_blank');
         a.setAttribute('rel','noopener noreferrer');
+        a.classList.add('external');
+        if (!a.title) a.title = 'Opens in a new tab';
       }
     } catch(e){ /* ignore invalid URLs */ }
   })

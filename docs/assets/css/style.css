@@ -38,3 +38,18 @@ body{margin:0;font-family:Inter,Segoe UI,Roboto,Helvetica,Arial,sans-serif;backg
 /* small utility */
 .section-title{display:flex;align-items:center;justify-content:space-between;margin-bottom:0.75rem}
 .section-title h2{margin:0}
+
+/* external link marker */
+a.external::after{content:' \2197';font-size:0.85em;margin-left:0.35rem;opacity:0.9}
+
+/* DSA sidebar */
+.dsa-nav{background:linear-gradient(180deg,rgba(255,255,255,0.02),transparent);padding:1rem;border-radius:8px;border:1px solid rgba(255,255,255,0.03);margin-bottom:1rem}
+.dsa-nav h4{margin:0 0 .5rem}
+.dsa-nav ul{list-style:none;padding:0;margin:0}
+.dsa-nav li{margin:0.35rem 0}
+.dsa-nav a{color:var(--muted);text-decoration:none}
+.dsa-nav a:hover{color:var(--text)}
+
+@media (min-width:992px){
+  .dsa-layout{display:grid;grid-template-columns:220px 1fr;gap:1.5rem}
+}
