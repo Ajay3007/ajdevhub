@@ -1,0 +1,14 @@
+{
+  "name": "ajdevhub-visual-tests",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "install:playwright": "npx playwright install chromium",
+    "screenshot": "node screenshot.js",
+    "a11y": "node a11y.js"
+  },
+  "devDependencies": {
+    "playwright": "^1.40.0",
+    "axe-core": "^4.8.0"
+  }
+}
