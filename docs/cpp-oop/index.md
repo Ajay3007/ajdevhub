@@ -1,7 +1,7 @@
-ï»¿---
+﻿﻿---
 title: C++ / OOP
 ---
-# Ã°Å¸Å¡â€” OOP in Modern C++ Ã¢â‚¬â€ Hands-On Examples
+# ðŸš— OOP in Modern C++ â€” Hands-On Examples
 
 ![C++17](https://img.shields.io/badge/C++-17-blue.svg)
 ![Platform](https://img.shields.io/badge/Platform-Windows%20%7C%20Linux-lightgrey)
@@ -25,23 +25,23 @@ This repository is built for **interview preparation**, **C++ learning**, and **
 
 ---
 
-# Ã°Å¸â€œÂ Project Structure
+# ðŸ“ Project Structure
 
 ```text
 oops/
-Ã¢â€Å“Ã¢â€â‚¬Ã¢â€â‚¬ Main.cpp                         # Starter example / entry point
-Ã¢â€Å“Ã¢â€â‚¬Ã¢â€â‚¬ shallow_vs_deep_copy/            # Deep copy vs shallow copy demos
-Ã¢â€Å“Ã¢â€â‚¬Ã¢â€â‚¬ smart_pointers/                  # unique_ptr/shared_ptr/weak_ptr demos
-Ã¢â€Å“Ã¢â€â‚¬Ã¢â€â‚¬ friend_function_vs_friend_class/ # Friend usage examples
-Ã¢â€Å“Ã¢â€â‚¬Ã¢â€â‚¬ operator_overloading/            # Operator <<, +, ==, etc.
-Ã¢â€Å“Ã¢â€â‚¬Ã¢â€â‚¬ .vscode/                         # Build tasks for VS Code
-Ã¢â€Å“Ã¢â€â‚¬Ã¢â€â‚¬ [cpp_oop_interview_checklist.pdf]({{ site.baseurl }}/assets/pdfs/oops/cpp_oop_interview_checklist.pdf)
-Ã¢â€Å“Ã¢â€â‚¬Ã¢â€â‚¬ [cpp_oop_interview_checklist_extended.pdf]({{ site.baseurl }}/assets/pdfs/oops/cpp_oop_interview_checklist_extended.pdf)
-Ã¢â€â€Ã¢â€â‚¬Ã¢â€â‚¬ README.md
+â”œâ”€â”€ Main.cpp                         # Starter example / entry point
+â”œâ”€â”€ shallow_vs_deep_copy/            # Deep copy vs shallow copy demos
+â”œâ”€â”€ smart_pointers/                  # unique_ptr/shared_ptr/weak_ptr demos
+â”œâ”€â”€ friend_function_vs_friend_class/ # Friend usage examples
+â”œâ”€â”€ operator_overloading/            # Operator <<, +, ==, etc.
+â”œâ”€â”€ .vscode/                         # Build tasks for VS Code
+â”œâ”€â”€ [cpp_oop_interview_checklist.pdf]({{ site.baseurl }}/assets/pdfs/oops/cpp_oop_interview_checklist.pdf)
+â”œâ”€â”€ [cpp_oop_interview_checklist_extended.pdf]({{ site.baseurl }}/assets/pdfs/oops/cpp_oop_interview_checklist_extended.pdf)
+â””â”€â”€ README.md
 ```
 
 # Concepts Demonstrated
-## Ã¢Å“â€ Object-Oriented Fundamentals
+## âœ” Object-Oriented Fundamentals
 
 - Class, Object, Encapsulation
 
@@ -51,7 +51,7 @@ oops/
 
 - Access Specifiers: public / private / protected
 
-## Ã¢Å“â€ Important C++ Concepts
+## âœ” Important C++ Concepts
 
 - Constructors / Destructors
 
@@ -69,7 +69,7 @@ oops/
 
 - RAII and memory safety
 
-## Ã¢Å“â€ Interview-Oriented Topics
+## âœ” Interview-Oriented Topics
 
 - Overload resolution
 
@@ -79,7 +79,7 @@ oops/
 
 - When to use weak_ptr
 
-# Ã°Å¸Â§Â© UML Diagrams (ASCII)
+# ðŸ§© UML Diagrams (ASCII)
 ## Friend Function vs Friend Class
 
 ```UML
@@ -118,9 +118,9 @@ shared_ptr  ---> reference counted shared ownership
 weak_ptr    ---> observer (non-owning reference)
 ```
 
-# Ã°Å¸â€œÅ¡ Folder-by-Folder Usage
+# ðŸ“š Folder-by-Folder Usage
 
-## Ã°Å¸â€Â¹ shallow_vs_deep_copy/
+## ðŸ”¹ shallow_vs_deep_copy/
 
 ### Demonstrates:
 
@@ -130,7 +130,7 @@ weak_ptr    ---> observer (non-owning reference)
 
 - Rule of 3: destructor, copy constructor, copy assignment
 
-## Ã°Å¸â€Â¹ smart_pointers/
+## ðŸ”¹ smart_pointers/
 
 ### Shows:
 
@@ -140,7 +140,7 @@ weak_ptr    ---> observer (non-owning reference)
 
 - weak_ptr to avoid circular references
 
-## Ã°Å¸â€Â¹ friend_function_vs_friend_class/
+## ðŸ”¹ friend_function_vs_friend_class/
 
 ### Explains:
 
@@ -150,7 +150,7 @@ weak_ptr    ---> observer (non-owning reference)
 
 - Why friends should be used sparingly
 
-## Ã°Å¸â€Â¹ operator_overloading/
+## ðŸ”¹ operator_overloading/
 
 ### Examples:
 
@@ -168,7 +168,7 @@ weak_ptr    ---> observer (non-owning reference)
 
 [Car Simulation Project](https://ajay3007.github.io/car_project/)
 
-# Ã°Å¸â€œâ€ž Included PDF Checklists
+# ðŸ“„ Included PDF Checklists
 
 - [cpp_oop_interview_checklist.pdf]({{ site.baseurl }}/assets/pdfs/oops/cpp_oop_interview_checklist.pdf)
 
@@ -188,13 +188,14 @@ weak_ptr    ---> observer (non-owning reference)
 
 - Perfect for fast revision before interviews.
 
-## Ã°Å¸â€œâ€ž License
+## ðŸ“„ License
 This project is open for educational use.
 
 ---
 
-## Ã°Å¸â€˜Â¨Ã¢â‚¬ÂÃ°Å¸â€™Â» Author
+## ðŸ‘¨â€ðŸ’» Author
 Created by **Ajay Gupt** as part of C++ OOP learning and system design practice.
 
-If you like this repo, consider Ã¢Â­Â starring it!
+If you like this repo, consider â­ starring it!
+
 
