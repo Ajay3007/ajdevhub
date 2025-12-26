@@ -15,7 +15,7 @@ The goal is to understand how a packet enters VPP, how it is routed (L3 forwardi
 **NOTE:**
 This example is based on Dataplane Stack [IPV4 L3 Forwarding VPP](https://dataplane-stack.docs.arm.com/en/nw-ds-2024.03.29/user_guide/l3_forwarding_vpp.html)
 
-Scripts file to run the VPP application can be founde [Here](https://github.com/Ajay3007/ajdevhub/tree/master/src/vpp/l3fwd).
+Scripts file to run the VPP application can be found [here]({{ site.baseurl }}/src/vpp/l3fwd/run_vpp_rt.sh) (other helper scripts are in the same directory).
 It contains:
 - Router
 - Traffic Monitor
