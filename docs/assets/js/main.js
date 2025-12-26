@@ -72,4 +72,16 @@ document.addEventListener('DOMContentLoaded', function(){
     const first = card.querySelector('.icon');
     if(first) first.replaceWith(img); else card.insertBefore(img, card.firstChild);
   })
+
+  // Dropdown toggle on touch / small screens: prevent navigation and show submenu
+  document.querySelectorAll('.drop-toggle').forEach(btn=>{
+    btn.addEventListener('click', e=>{
+      const parent = btn.closest('.nav-item');
+      if(!parent) return;
+      if(window.innerWidth <= 720){
+        e.preventDefault();
+        parent.classList.toggle('open');
+      }
+    })
+  })
 });
