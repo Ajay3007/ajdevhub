@@ -1,4 +1,4 @@
-# 🚀 Arrays Mastery Guide
+# <img src="/ajdevhub/assets/icons/rocket.svg" class="inline-icon" alt=""> Arrays Mastery Guide
 
 ## ⭐ 1. Array Concepts You Must Master
 ### 🔹 Basic Operations

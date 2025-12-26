@@ -62,7 +62,7 @@ Most used searching technique in interviews.
 
 # [For Sorting Guide Click Here](sorting.md)
 
-## 🧠 Practical Sorting Problems
+## <img src="/ajdevhub/assets/icons/brain.svg" class="inline-icon" alt=""> Practical Sorting Problems
 
 **Learn how sorting enables solutions:**
 
